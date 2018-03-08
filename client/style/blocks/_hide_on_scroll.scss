@@ -1,0 +1,21 @@
+////
+/// Blocks:_hide_on_scroll
+///
+/// @author K Huehn
+/// @content Hide on scroll
+///
+////
+
+.hide-on-scroll {
+  @include relative;
+
+  overflow: hidden;
+
+  .hideable {
+    @include fixed(top 0);
+    @include sizes(100%, null);
+
+    transition: transform 0.5s ease;
+    transform: translateY(0%);
+  }
+}

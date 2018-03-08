@@ -1,0 +1,58 @@
+////
+/// Page:Nav:Navbar:_collapse
+///
+/// @author K Huehn
+/// @content Main navigation
+///
+////
+
+&-collapse {
+  @include flexbox;
+
+	@include mobileAndTablet {
+		@include fixed(top 0 left 0 right 0 popover);
+
+		@include flex-direction(column);
+
+		overflow: hidden;
+
+		@include sizes(100%, null);
+		padding: 0;
+
+		transition: opacity 300ms ease-in;
+		transform: translate3d(0, -120%, 0);
+
+		opacity: 0;
+		background-color: $mineshaft;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	@include desktop {
+		@include flex(1 0 auto);
+
+		transition: none;
+		transform: none;
+	}
+
+	.navbar-nav {
+
+		.dropdown-menu {
+
+			@include mobileAndTablet {
+				@include position(static);
+
+				display: block;
+				float: none;
+
+				color: inherit;
+
+				border: 0 none;
+				background-color: $transparent;
+				box-shadow: none;
+			}
+		}
+	}
+}

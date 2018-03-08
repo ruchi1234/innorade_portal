@@ -1,0 +1,52 @@
+////
+/// Page:Nav:Navbar:_social
+///
+/// @author K Huehn
+/// @content Social media menu
+///
+////
+
+&.social {
+	@include font-size($base-font-size);
+  display: none;
+
+	color: map-get($social-media-colors, icon);
+
+  @include tablet {
+    display: block;
+    @include fixed(right 12px bottom 36px);
+		@include flex-direction(column);
+	}
+
+	@include desktop {
+    display: block;
+    @include fixed(right 12px bottom 36px);
+		@include flex-direction(column);
+	}
+
+	> li {
+    margin: 6px;
+		font-size: .9em;
+
+		@include sizes(2.5em,null);
+
+		@include flex-direction(column);
+		@include align-items(stretch);
+
+		&,
+		> a {
+			@include flexbox;
+		}
+
+		a {
+			@include sizes(null, 2.5em);
+
+			@include justify-content(center);
+			@include align-items(center);
+
+			padding: 0;
+			border-radius: 100%;
+			background-color: map-get($social-media-colors, background);
+		}
+	}
+}

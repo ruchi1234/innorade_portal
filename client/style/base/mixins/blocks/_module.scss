@@ -1,0 +1,31 @@
+////
+/// Base:Mixins:Blocks:_module
+///
+/// @author K Huehn
+/// @content Block mixins module
+///
+////
+
+/// @name Colors inheritance
+@import "{}/client/style/base/mixins/blocks/color";
+
+/// @name Backgrounds
+@import "{}/client/style/base/mixins/blocks/background";
+
+/// @name No border radius
+@import "{}/client/style/base/mixins/blocks/border";
+
+/// @name Buttons
+@import "{}/client/style/base/mixins/blocks/button";
+
+/// @name Columns
+@import "{}/client/style/base/mixins/blocks/columns";
+
+/// @name Margins
+@import "{}/client/style/base/mixins/blocks/margin";
+
+/// @name User info bar
+@import "{}/client/style/base/mixins/blocks/user_info";
+
+/// @name SVG images
+@import "{}/client/style/base/mixins/blocks/svg";

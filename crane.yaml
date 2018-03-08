@@ -1,0 +1,23 @@
+containers:
+  maven:
+    image: golden/meteor-dev
+    run:
+      publish: ["3000:3000"]
+      volume: ["~/.meteor:/root/.meteor"]
+      volume: ["~/.npm:/root/.npm"]
+      volume: ["./:/opt/application"]
+      workdir: "/opt/application"
+      detach: true
+      privileged: true
+      user: 1000
+      cmd: "run --settings settings.dev.json --verbose"
+  maven-storybook:
+    image: node:7-onbuild
+    run:
+      publish: ["9001:9001"]
+      volume: ["./:/usr/app/src"]
+      workdir: '/usr/app/src'
+      detach: true
+      privileged: true
+      user: 1000
+      cmd: "npm run storybook"

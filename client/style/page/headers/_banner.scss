@@ -1,0 +1,84 @@
+////
+/// Page:Headers:_banner
+///
+/// @author K Huehn
+/// @content Page header structure
+///
+////
+
+[role="banner"] {
+	@include position(relative, header);
+
+	@include flex-direction(column);
+
+	color: map-get($top_header_colors, text);
+	background-color: map-get($top_header_colors, background);
+
+	&.menu-open {
+		@include mobileAndTablet {
+			@include stack(mobile-nav);
+		}
+	}
+
+	.nav {
+		margin-bottom: 0;
+	}
+
+	.navbar {
+		@include font-size(16px);
+
+		&-header {
+			@include sizes(null, (map-get($main-navigation, height) - 30));
+			padding: (map-get($main-navigation, padding-top) - 10) 15px;
+
+			@include flex(1 0 auto);
+
+			@include tablet {
+				// @include sizes(null, auto);
+				// padding: 10px 0;
+
+				// @include flex(0 0 180px);
+			}
+
+			@include desktop {
+				@include sizes(null, map-get($main-navigation, height));
+				padding-top: map-get($main-navigation, padding-top);
+				padding-bottom: map-get($main-navigation, padding-top);
+			}
+		}
+
+		&-brand {
+			@include flex(0 0 200px);
+		}
+
+		&-form {
+			font-size: em(18px);
+
+			@include desktop {
+				font-size: em(24px);
+			}
+		}
+	}
+
+	.tabs {
+		@include flexbox;
+		@include flex-direction(column);
+
+		background-color: map-get($tab-bar-colors, background);
+
+		@include mobile-only {
+			padding: 0 5px;
+		}
+	}
+
+	.myribbon {
+			margin-bottom: 20px;
+			padding: 10px 0 20px;
+
+			background: $myribbon-background-color;
+
+			.btn {
+				margin-top: 20px;
+			}
+	}
+}

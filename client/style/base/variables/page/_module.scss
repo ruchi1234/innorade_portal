@@ -1,0 +1,28 @@
+////
+/// Base:Variables:Page:_module
+///
+/// @author K Huehn
+/// @content Page module
+///
+////
+
+/// @name Breakpoints
+@import "{}/client/style/base/variables/page/breakpoints";
+
+/// @name Common
+@import "{}/client/style/base/variables/page/common";
+
+/// @name Header
+@import "{}/client/style/base/variables/page/header";
+
+/// @name Modals
+@import "{}/client/style/base/variables/page/modal";
+
+/// @name Social media icons
+@import "{}/client/style/base/variables/page/social";
+
+/// @name Stacking order
+@import "{}/client/style/base/variables/page/stacking";
+
+/// @name Sortables
+@import "{}/client/style/base/variables/page/sortable";

@@ -1,0 +1,66 @@
+<mjml>
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-divider
+          border-color="#6563a4"
+          border-width="8px"
+          border-style="solid">
+        </mj-divider>
+        <mj-column
+          vertical-align="middle">
+          <mj-image
+            width="144"
+            align="left"
+            src="{{ROOT_URL}}img/maven/maven_logo.png"
+            href="{{ROOT_URL}}"
+            alt="">
+          </mj-image>
+          <mj-divider
+            border-color="#aeb8b8"
+            border-width="2px"
+            border-style="solid">
+          </mj-divider>
+          <mj-text
+            font-size="14px"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif">
+            Thank you for creating your account. Please click on the following link to verify your email address:
+          </mj-text>
+          <mj-text
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+            font-size="14">
+            <p>
+              <a href="{{verify-email}}" style="text-decoration: underline; color: #6563a4;">
+                <span>Click here to verify your email address.</span>
+              </a>
+            </p>
+          </mj-text>
+          <mj-text
+            font-size="14px"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif">
+              Enjoy browsing and earning!
+          </mj-text>
+          <mj-divider
+            border-color="#aeb8b8"
+            border-width="2px"
+            border-style="solid">
+          </mj-divider>
+          <mj-text
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+            font-size="22"
+            font-weight="700"
+            color="#6563a4"
+            align="center">
+            Clip. Share. Earn.
+          </mj-text>
+          <mj-text
+            font-size="14px"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+            align="center">
+              Copyright © ​2016​ ​Maven​ Exhange Inc., All rights reserved.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>

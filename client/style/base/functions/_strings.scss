@@ -1,0 +1,37 @@
+////
+/// Base:Functions:_strings
+///
+/// @author K Huehn
+/// @content String functions
+///
+////
+
+
+/// @name To-string
+/// Convert type to string
+/// @author Hugo Giraudel
+/// @param {String} Value to convert to string
+/// @link http://hugogiraudel.com/2014/01/27/casting-types-in-sass/
+@function to-string($value:null) {
+	@if $value != null {
+		@return inspect($value);
+	}
+}
+
+
+/// @name Str-replace
+/// Replace `$search` with `$replace` in `$string`
+/// @author Hugo Giraudel
+/// @param {String} $string - Initial string
+/// @param {String} $search - Substring to replace
+/// @param {String} $replace ('') - New value
+/// @return {String} - Updated string
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}

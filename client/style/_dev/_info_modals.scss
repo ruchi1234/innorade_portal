@@ -1,0 +1,17 @@
+section {
+  &.info-modals {
+    h2 {
+      text-align: center;
+      color: $space;
+    }
+    padding: 25px 50px;
+
+    @include mobile-only {
+      padding: 25px;
+    }
+    p,
+    label {
+      color: $space;
+    }
+  }
+}

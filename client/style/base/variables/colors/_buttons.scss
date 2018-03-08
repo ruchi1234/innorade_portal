@@ -1,0 +1,23 @@
+////
+/// Base:Variables:Colors:_buttons
+///
+/// @author K Huehn
+/// @content Button colors
+///
+////
+
+
+/// @name Buttons
+$button_colors:                     (
+                                      text:          $white,
+                                      primary-bg:    $scampi,
+                                      primary-hover: $martinique,
+                                      secondary-bg:  $transparent
+                                    ) !default;
+
+/// @name Icons
+$icon-button-colors:                (
+                                      rest:   $edward,
+                                      hover:  $scampi,
+                                      active: $scampi
+                                    ) !default;

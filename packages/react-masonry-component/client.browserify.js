@@ -1,0 +1,1 @@
+Masonry = require('masonry-layout');

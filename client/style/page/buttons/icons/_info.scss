@@ -1,0 +1,20 @@
+////
+/// Page:Buttons:Icon:_info
+///
+/// @author K Huehn
+/// @content Info button
+///
+////
+
+.info & {
+	@include info-icon(none, map-get($icon-button-colors, rest));
+
+	&:hover,
+	&:active {
+		@include info-icon(none, map-get($icon-button-colors, hover));
+	}
+}
+
+.info.active & {
+	@include info-icon(map-get($icon-button-colors, active), $white);
+}

@@ -1,0 +1,49 @@
+section.addProductModal {
+  div {
+    &.product-wiz {
+      text-align: center;
+      .row {
+        margin: 30px 0;
+        &:nth-of-type(1) {
+          .col {
+            input {
+              width: 100%;
+            }
+            .buttonContainer {
+              margin: 15px 0;
+              button {
+                width: 45% !important;
+                &:nth-of-type(1) {
+                  float: left;
+                }
+                &:nth-of-type(2) {
+                  float: right;
+                }
+              }
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          &::before {
+            content: '';
+            border-top: solid 1px $scampi;
+            width: 100%;
+          }
+          .col {
+            margin-top: 30px;
+            div {
+              text-align: center;
+              button {
+                width: 70%;
+
+                @include mobile-only {
+                  width: 90% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

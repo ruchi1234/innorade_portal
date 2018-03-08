@@ -1,0 +1,26 @@
+////
+/// Page:Footers:_contentinfo
+///
+/// @author K Huehn
+/// @content Page footer
+///
+////
+
+[role="contentinfo"] {
+
+	> .container {
+
+		@include desktop {
+			@include flexbox;
+			@include justify-content(flex-end);
+		}
+	}
+
+	.nav.social {
+
+		@include desktop {
+			@include fixed(bottom 30px popover);
+			margin-left: -15px;
+		}
+	}
+}

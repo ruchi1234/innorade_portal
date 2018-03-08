@@ -1,0 +1,85 @@
+////
+/// Page:Nav:Navbar:_form
+///
+/// @author K Huehn
+/// @content Navbar-Form structures
+///
+////
+
+
+&-form {
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+
+  background-color: map-get($search-bar-colors, background);
+
+  > .container {
+
+    @include mobile-only {
+      @include sizes(100%, null);
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .input-group {
+    display: block;
+
+    @include flexbox;
+    @include flex-wrap(nowrap);
+
+    @include sizes(100%,null);
+
+    color: map-get($search-bar-colors, text);
+
+    &-btn {
+      font-size: 1em;
+
+      @include sizes($search-bar-height, null);
+
+      @include flex(0 0 $search-bar-height);
+
+      .search-button {
+        @extend .form-control;
+
+        @include sizes(100%, null);
+        margin-left: 0;
+
+        color: map-get($search-bar-colors, button-text);
+        background-color: map-get($search-bar-colors, button);
+      }
+    }
+
+    > .form-control {
+      color: map-get($search-bar-colors, text);
+      border: 0 none;
+      outline: 0 none;
+      background-color: $transparent;
+
+      @include placeholder {
+        @include colorInherit;
+      }
+    }
+  }
+
+  .form-control {
+    font-size: 1em;
+
+    @include sizes(null, $search-bar-height);
+
+    border: 0 none;
+    @include noBorderRadius;
+    box-shadow: none;
+
+    appearance: none !important;
+
+    &:focus {
+      border-color: $transparent;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}

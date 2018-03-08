@@ -1,0 +1,115 @@
+section.product-wiz{
+  text-align: center;
+  .boardInformation {
+    .row {
+      .col {
+        .form-group {
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          input,
+          textarea {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+section.clip-wiz {
+  text-align: center;
+  padding: 25px 50px;
+
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include mobile-only {
+    padding: 25px;
+  }
+  .boardInformation {
+    .row {
+      .col {
+        .form-group {
+          &.search-term-wrap {
+            background-color: #e5e5e5;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+            input {
+              &#search-term {
+                background-color: #e5e5e5;
+                color: #aeb8b8;
+                border: none;
+                border-radius: 0;
+              }
+            }
+          }
+          .search-button {
+            color: #fff;
+            border-radius: 0;
+            background-color: #6563a4;
+          }
+        }
+        .btn-group {
+          display: flex;
+          flex-direction: row;
+          button {
+            flex: 1;
+            font-weight: 700;
+            line-height: 2.28571;
+            padding-right: 0;
+            text-align: center;
+            color: #aeb8b8;
+            background-color: #F4F4F2;
+            border: none;
+            outline: none;
+
+            @include mobile-only {
+              font-size: 1em;
+            }
+            &.active {
+              color: #555;
+              background-color: #fff;
+              border-top: 1px solid #aeb8b8;
+              border-left: 1px solid #aeb8b8;
+              border-right: 1px solid #aeb8b8;
+              span {
+                border-bottom: 3px solid #49d0bf;
+                padding-bottom: 5px;
+              }
+              &:hover {
+                color: #555;
+                background-color: #fff;
+                border-top: 1px solid #aeb8b8;
+                border-left: 1px solid #aeb8b8;
+                border-right: 1px solid #aeb8b8;
+              }
+            }
+            &:hover {
+              border-bottom-color: transparent;
+              background-color: rgb(219, 219, 219);
+              color: white;
+            }
+          }
+        }
+        .mavelet-wrapper {
+          .form-group {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            input,
+            textarea {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

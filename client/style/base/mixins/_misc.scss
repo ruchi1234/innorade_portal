@@ -1,0 +1,60 @@
+////
+/// Base:Mixins:_misc
+///
+/// @author K Huehn
+/// @content Miscellaneous mixins
+///
+////
+
+/// @name Sizes
+/// Mixin to generate width/height combinations
+@mixin sizes($width:null, $height:$width) {
+	@if $width != null or $width != '' {
+		@if type-of($width) == string {
+			$width: unquote($width);
+		}
+		width: $width;
+	}
+	@if type-of($height) == string {
+		$height: unquote($height);
+	}
+	height: $height;
+
+	@content;
+}
+
+/// @name Inline block
+/// mixin with vertical-align
+@mixin inline-block($vertical:null) {
+	display: inline-block;
+
+	@if $vertical != null {
+		@if index(baseline sub super top text-top middle bottom text-bottom initial inherit, $vertical) {
+			vertical-align: $vertical;
+		}
+		@else {
+			@each $unit in (em, ex, px, cm, mm, in, pt, pc, ch, rem, "%") {
+				@if str-index(inspect($vertical), $unit) {
+					vertical-align: $vertical;
+				}
+			}
+		}
+	}
+
+	@content;
+}
+
+
+@mixin fit-parent() {
+  @include absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@mixin flex-center-child() {
+  @include flexbox;
+  justify-content: center;
+  align-items: center;
+}

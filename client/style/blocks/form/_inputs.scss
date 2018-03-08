@@ -1,0 +1,121 @@
+////
+/// Blocks:Form:_input
+///
+/// @author
+/// @content Form Inputs
+///
+////
+
+
+input {
+
+	&[type="text"],
+	&[type="email"] {
+		@extend textarea;
+		line-height: (50px / 16px);
+		padding: 0 1em;
+
+		@include placeholder {
+			color: map-get($input-colors, placeholder);
+		}
+
+		&:focus {
+			color: map-get($input-colors, text);
+			border-color: map-get($input-colors, highlight);
+			outline: 0 none;
+		}
+	}
+}
+
+textarea {
+	@include font-size(18px);
+
+	color: map-get($input-colors, text);
+	border: 1px solid;
+	border-color: map-get($input-colors, border);
+	background-color: map-get($input-colors, background);
+}
+
+
+
+label {
+  @include font-size(16px);
+  font-family: $raleway-font-family;
+  font-weight: bold;
+  color: $space;
+
+  > .hint {
+    @include font-size(14px);
+    color: $iron;
+  }
+}
+
+input,
+select,
+textarea {
+  @include font-size(18px);
+  box-shadow: none;
+  height: 50px;
+  line-height: 20px !important;
+  border-radius: 0;
+  font-size: 18px;
+  text-transform: none;
+  border: 1px solid $edward;
+  color: $space;
+  outline: none;
+  background-color: $light_grey;
+
+  &:focus {
+    border: 1px solid $scampi;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    @include font-size(18px);
+
+    color: $edward;
+    font-family: $raleway-font-family;
+  }
+}
+
+.select-pita {
+  @include font-size(18px);
+  box-shadow: none;
+  height: 50px;
+  line-height: 20px !important;
+  border-radius: 0;
+  font-size: 18px;
+  text-transform: none;
+  border: 1px solid $edward;
+  color: $space;
+  outline: none;
+  background-color: $light_grey;
+	width: 50%;
+
+	select.decorated option:hover {
+	    box-shadow: 0 0 10px 100px $scampi inset;
+	}
+
+  &:focus {
+    border: 1px solid $scampi;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    @include font-size(18px);
+
+    color: $edward;
+    font-family: $raleway-font-family;
+  }
+}
+
+.has-error {
+  label {
+    color: $error-red;
+  }
+
+  input,
+  textarea {
+    border-color: $error-red;
+  }
+}

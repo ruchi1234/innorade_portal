@@ -1,0 +1,33 @@
+////
+/// Page:Buttons:Icon:_attach
+///
+/// @author K Huehn
+/// @content Attach button
+///
+////
+
+.attach & {
+	@include attach-icon(none, map-get($icon-button-colors, rest));
+
+	&:hover,
+	&:active {
+		@include attach-icon(none, map-get($icon-button-colors, hover));
+	}
+}
+
+.attach.active & {
+	@include attach-icon(map-get($icon-button-colors, active), $white);
+}
+
+.clip & {
+	@include clip-icon(none, map-get($icon-button-colors, rest));
+
+	&:hover,
+	&:active {
+		@include clip-icon(none, map-get($icon-button-colors, hover));
+	}
+}
+
+.clip.active & {
+	@include clip-icon(map-get($icon-button-colors, active), $white);
+}

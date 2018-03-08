@@ -1,0 +1,49 @@
+////
+/// Base:Mixins:_module
+///
+/// @author K Huehn
+/// @content Base mixins module
+///
+////
+
+/// @name Background
+@import "{}/client/style/base/mixins/background";
+
+/// @name Breakpoints
+@import "{}/client/style/base/mixins/breakpoints";
+
+/// @name Flexbox
+@import "{}/client/style/base/mixins/flexbox";
+
+/// @name Font
+@import "{}/client/style/base/mixins/font";
+
+/// @name Keyframes
+@import "{}/client/style/base/mixins/keyframes";
+
+/// @name Misc
+@import "{}/client/style/base/mixins/misc";
+
+/// @name Placeholders
+@import "{}/client/style/base/mixins/placeholder";
+
+/// @name Position
+@import "{}/client/style/base/mixins/position";
+
+/// @name Shadows
+@import "{}/client/style/base/mixins/shadows";
+
+/// @name CSS Triangles
+@import "{}/client/style/base/mixins/triangles";
+
+/// @name Text truncation
+@import "{}/client/style/base/mixins/truncation";
+
+/// @name Z-index stacking
+@import "{}/client/style/base/mixins/stacking";
+
+/// @name multiLineEllipsis
+@import "{}/client/style/base/mixins/multiline";
+
+/// @name Blocks
+@import "{}/client/style/base/mixins/blocks/module";

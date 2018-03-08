@@ -1,0 +1,34 @@
+////
+/// Base:Functions:_data_uri
+///
+/// @author K Huehn
+/// @content Data URI functions
+///
+////
+
+/// @name UTF-URI
+/// Create UTF-8 data URIs
+/// @param {String} Unicode string to encode
+/// @param {String} Media type to prefix (optional)
+@function utf-uri($data:null, $mediatype:'image/svg+xml') {
+	@if $data != null {
+		$prefix: 'data:' + $mediatype + ';utf8,';
+		@return $prefix + escape-uri($data);
+	}
+	@return $data;
+}
+
+/// @name Escape-URI
+/// Escape special characters in data uri
+@function escape-uri($uri:null) {
+	@if $uri != null {
+		$uri: str-replace($uri,'"','\'');
+		$uri: str-replace($uri,'<','%3C');
+		$uri: str-replace($uri,'>','%3E');
+		$uri: str-replace($uri,'&','%26');
+		$uri: str-replace($uri,'#','%23');
+
+		@return $uri;
+	}
+	@return $uri;
+}

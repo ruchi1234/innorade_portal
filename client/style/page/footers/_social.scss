@@ -1,0 +1,38 @@
+////
+/// Page:Footers:_social
+///
+/// @author K Huehn
+/// @content Footers structure
+///
+////
+
+
+.toolbar-footer {
+
+	> .nav {
+		@include flexbox;
+		@include justify-content(space-between);
+
+		float: none;
+
+		color: map-get($brick-colors, link);
+
+		> li {
+			@include autoSpread('&:first-child','&:last-child','&');
+
+			> a {
+
+				span {
+
+					&:before {
+						@include inline-block(middle);
+
+						margin-right: .25em;
+
+						color: map-get($brick-colors, icon);
+					}
+				}
+			}
+		}
+	}
+}

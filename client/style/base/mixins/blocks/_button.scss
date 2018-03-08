@@ -1,0 +1,108 @@
+////
+/// Base:Mixins:Blocks:_button
+///
+/// @author K Huehn
+/// @content Button mixins
+///
+////
+
+/// @name Button
+/// button variations
+@mixin button-variant($color:null, $color-bg:null, $border-color:null) {
+	@if $color != null {
+
+		&,
+		&:active,
+		&.active,
+		&.dropdown-toggle {
+
+			&:focus,
+			&.focus,
+			&:hover {
+				color: $color;
+			}
+		}
+
+		.badge {
+			background-color: $color;
+		}
+	}
+
+	@if $color-bg != null {
+
+		&:focus,
+		&.focus,
+		&:hover,
+		&:active,
+		&.active,
+		&.dropdown-toggle {
+			background-color: hsl( hue($color-bg), saturation($color-bg), lightness($color-bg) - 10 );
+		}
+
+		&:active,
+		&.active,
+		&.dropdown-toggle {
+			background-image: none;
+
+			&:hover,
+			&:focus,
+			&.focus {
+				background-color: hsl( hue($color-bg), saturation($color-bg), lightness($color-bg) - 17 );
+			}
+		}
+
+		&.disabled,
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $edward;
+			&:hover,
+			&:focus,
+			&.focus,
+			&:active,
+			&.active {
+				background-color: $edward;
+			}
+		}
+
+		.badge {
+			color: $color-bg;
+		}
+	}
+
+	@if $border-color != null {
+
+		&,
+		&:active,
+		&.active,
+		&.dropdown-toggle {
+
+			&:focus,
+			&.focus,
+			&:hover {
+				color: $color;
+			}
+		}
+
+		&.disabled,
+		&[disabled],
+		fieldset[disabled] & {
+			background-color: $edward;
+			&:hover,
+			&:focus,
+			&.focus,
+			&:active,
+			&.active {
+				border-color: $edward;
+			}
+		}
+	}
+}
+
+/// @name Btn-social
+/// Social button
+@mixin btn-social($color-bg:null, $color:$white) {
+	@if $color-bg != null {
+		background-color: $color-bg;
+		@include button-variant($color, $color-bg, rgba($black, .2));
+	}
+}

@@ -1,0 +1,11 @@
+const DEFAULT_LIMIT = 15;
+
+export {
+  DEFAULT_LIMIT,
+};
+
+const DEFAULT_INFINITE_SCROLL_OFFSET = '?';
+
+export {
+  DEFAULT_INFINITE_SCROLL_OFFSET,
+};

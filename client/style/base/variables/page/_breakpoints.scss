@@ -1,0 +1,53 @@
+////
+/// Base:Variables:Page:_breakpoints
+///
+/// @author K Huehn
+/// @content Breakpoint values
+///
+////
+
+
+/// @name Old breakpoints
+$old-breakpoints:   (
+                      screen-xs-min: 320px,
+                      screen-sm-min: 768px,
+                      screen-md-min: 992px,
+                      screen-lg-min: 1200px
+                    ) !default;
+
+
+/// @name Font sized breakpoints
+$rem-breakpoints:   (
+                      // Extra small screen / phone
+                      xs: 0,
+                      // Small screen / phone
+                      sm: 34rem,
+                      // Medium screen / tablet
+                      md: 48rem,
+                      // Large screen / desktop
+                      lg: 62rem,
+                      // Extra large screen / wide desktop
+                      xl: 75rem
+                    ) !default;
+
+
+/// @name Actual breakpoints
+$grid-breakpoints:  (
+                      sm: (map-get($old-breakpoints, screen-xs-min) 576px), // Small screen / phone
+                      md: (map-get($old-breakpoints, screen-sm-min) 750px), // Medium screen / tablet
+                      lg: (map-get($old-breakpoints, screen-md-min) 940px), // Large screen / desktop
+                      xl: (map-get($old-breakpoints, screen-lg-min) 1170px) // Extra large screen / wide desktop
+                    ) !default;
+
+
+/// @name Grid containers
+$container-max-widths: (
+                        sm: 576px,
+                        // sm: 42.88rem,
+                        md: 720px,
+                        // md: 53.6rem,
+                        lg: 940px,
+                        // lg: 69.4rem,
+                        xl: 1170px
+                        // xl: 83.57143rem
+                       ) !default;

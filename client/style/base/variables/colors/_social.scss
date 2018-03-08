@@ -1,0 +1,19 @@
+////
+/// Base:Variables:Colors:_social
+///
+/// @author K Huehn
+/// @content Social media color variables
+///
+////
+
+/// @name Social media
+$social-media-colors:    (
+                           background: $mercury,
+                           icon:       $edward,
+                           favorite:   $scampi,
+                         ) !default;
+
+$facebook:     #3b5998 !default;
+$twitter:      #1da1f2 !default;
+$google:       #d62d20 !default;
+$pinterest:    #c92228 !default;

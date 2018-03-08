@@ -1,0 +1,63 @@
+////
+/// Blocks:Popover:_module
+///
+/// @author K Huehn
+/// @content Popover module
+///
+////
+
+.resize-sensor {
+  @include position(absolute, top 0 left 0);
+  @include stack;
+  @include sizes(100%);
+
+  display: block;
+  overflow: hidden;
+
+
+  pointer-events: none;
+}
+
+.Popover {
+  &-body {
+    @include order(-1);
+    @include shadow(10px);
+
+    border-radius: 0 !important;
+    background-color: $white;
+
+    ul > li {
+      > a,
+      > button {
+        @include flexbox;
+        height: 40px;
+        min-width: 150px;
+        background-color: white;
+        border: none;
+        align-items: center;
+        padding: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        > * + * {
+          padding-left: 6px;
+        }
+
+
+        &:hover {
+          background-color: $wild-sand;
+        }
+      }
+    }
+  }
+
+  // disable animation
+  &,
+  .Popover-tip {
+    transition-duration: 0ms !important;
+    fill: white;
+  }
+
+  // TODO 
+  // Need to do something about icon sizing/email icon
+}

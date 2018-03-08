@@ -1,0 +1,68 @@
+////
+/// Page:Nav:Navbar:_default
+///
+/// @author K Huehn
+/// @content Navbar-Default structures
+///
+////
+
+&-bg {
+  background-color: white;
+  width: 100%;
+}
+
+&-default {
+	@include flexbox;
+	@include align-items(center);
+
+	margin-bottom: 0;
+
+	border-color: map-get($navbar-default-colors, border);
+	background-color: map-get($navbar-default-colors, background);
+
+	@include mobile-only {
+		@include sizes(100%, null);
+	}
+
+	.navbar-nav {
+		> li {
+			> a {
+				@extend %link-color;
+				margin: 0 auto;
+			}
+		}
+
+		%transparent {
+			background-color: $transparent;
+		}
+
+		> .active {
+
+			> a {
+
+				&,
+				&:focus,
+				&:hover {
+					@extend %transparent;
+				}
+			}
+		}
+	}
+
+	.navbar-form {
+		border: 0 none;
+	}
+
+	.navbar-toggle {
+		appearance: none;
+		@extend .navbar-form;
+		@include flex(0 0 auto);
+
+		background-color: $transparent !important;
+
+		&:focus,
+		&:hover {
+			@extend %transparent;
+		}
+	}
+}

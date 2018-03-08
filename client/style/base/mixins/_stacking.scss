@@ -1,0 +1,24 @@
+////
+/// Base:Mixins:_stacking
+///
+/// @author K Huehn
+/// @content Stacking mixins
+///
+////
+
+
+/// @name Stack
+/// set z-index order
+@mixin stack($index:-1, $list:$stacks) {
+	@if $index != -1 {
+		$z-index: index($list, unquote($index)) * 10;
+
+		@if $z-index != -1 {
+			z-index: $z-index;
+		}
+	} @else {
+		z-index: $index;
+	}
+
+	@content;
+}

@@ -1,0 +1,15 @@
+////
+/// Base:Mixins:Blocks:_color
+///
+/// @author K Huehn
+/// @content Color blocks
+///
+////
+
+/// @name ColorInherit
+/// Color inheritance
+@mixin colorInherit {
+	color: inherit !important;
+
+	@content;
+}

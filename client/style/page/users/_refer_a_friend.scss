@@ -1,0 +1,28 @@
+.refer-a-friend {
+  > * {
+    margin-bottom: 12px;
+  }
+
+  > .fine-print {
+    @include font-size(12px);
+    text-align: right;
+
+    @include mobile-only {
+      text-align: center;
+    }
+  }
+
+  .explain {
+    > h2 {
+      text-align: center;
+    }
+  }
+
+  > .actions {
+    @include flexbox;
+
+    > a {
+      margin: 6px;
+    }
+  }
+}

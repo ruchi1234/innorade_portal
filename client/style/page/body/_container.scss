@@ -1,0 +1,50 @@
+////
+/// Page:Body:_container
+///
+/// @author K Huehn
+/// @content Container override
+///
+////
+
+.container {
+	max-width: 100%;
+
+  &::after,
+  &::before {
+    content: none;
+  }
+
+	// @include breakpoint("min-width:#{nth(map-get($grid-breakpoints, sm), 1)}") {
+	// 	width: #{nth(map-get($grid-breakpoints, sm), 2)};
+	// }
+
+	// @include breakpoint("min-width:#{map-get($grid-breakpoints, sm)}") {
+	// 	// width: map-get($container-max-widths, sm);
+	// }
+
+	// @include breakpoint("min-width:#{map-get($grid-breakpoints, md)}") {
+	// 	// width: map-get($container-max-widths, md);
+	// 	// width: ( map-get($grid-breakpoints, md) * 0.93 );
+	// }
+
+	// @include breakpoint("min-width:#{map-get($grid-breakpoints, lg)}") {
+	// 	// width: map-get($container-max-widths, lg);
+	// }
+
+	// @include breakpoint("min-width:#{map-get($grid-breakpoints, xl)}") {
+	// 	// width: map-get($container-max-widths, xl);
+	// }
+
+	// @include breakpoint("min-width:1200px") {
+	// 	// width: auto;
+	// }
+
+	// @include breakpoint("min-width:#{map-get($grid-breakpoints, xl)}") {
+	// 	width: map-get($container-max-widths, xl);
+	// }
+}
+
+[hidden],
+.hidden {
+	display: none !important;
+}

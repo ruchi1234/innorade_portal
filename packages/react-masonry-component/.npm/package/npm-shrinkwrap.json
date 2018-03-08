@@ -1,0 +1,40 @@
+{
+  "dependencies": {
+    "masonry-layout": {
+      "version": "4.0.0",
+      "resolved": "https://registry.npmjs.org/masonry-layout/-/masonry-layout-4.0.0.tgz",
+      "from": "https://registry.npmjs.org/masonry-layout/-/masonry-layout-4.0.0.tgz",
+      "dependencies": {
+        "get-size": {
+          "version": "2.0.2",
+          "resolved": "https://registry.npmjs.org/get-size/-/get-size-2.0.2.tgz",
+          "from": "https://registry.npmjs.org/get-size/-/get-size-2.0.2.tgz"
+        },
+        "outlayer": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/outlayer/-/outlayer-2.0.1.tgz",
+          "from": "https://registry.npmjs.org/outlayer/-/outlayer-2.0.1.tgz",
+          "dependencies": {
+            "ev-emitter": {
+              "version": "1.0.2",
+              "resolved": "https://registry.npmjs.org/ev-emitter/-/ev-emitter-1.0.2.tgz",
+              "from": "https://registry.npmjs.org/ev-emitter/-/ev-emitter-1.0.2.tgz"
+            },
+            "fizzy-ui-utils": {
+              "version": "2.0.1",
+              "resolved": "https://registry.npmjs.org/fizzy-ui-utils/-/fizzy-ui-utils-2.0.1.tgz",
+              "from": "https://registry.npmjs.org/fizzy-ui-utils/-/fizzy-ui-utils-2.0.1.tgz",
+              "dependencies": {
+                "desandro-matches-selector": {
+                  "version": "2.0.1",
+                  "resolved": "https://registry.npmjs.org/desandro-matches-selector/-/desandro-matches-selector-2.0.1.tgz",
+                  "from": "https://registry.npmjs.org/desandro-matches-selector/-/desandro-matches-selector-2.0.1.tgz"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

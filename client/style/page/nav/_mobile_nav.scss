@@ -1,0 +1,101 @@
+.mobile-nav {
+  @include fit-parent;
+  position: fixed;
+  display: none;
+  overflow: hidden;
+
+  > .container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+    position: relative;
+
+    > ul {
+      height: inherit;
+      @include fit-parent;
+    }
+  }
+
+  &.open {
+    @include mobile {
+      &,
+      .container > ul,
+      .sub-menu > ul {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &,
+  .sub-menu > ul {
+    background-color: $white;
+    z-index: 5000;
+    height: inherit;
+    overflow-y: auto;
+  }
+
+  .sub-menu {
+    a {
+      @include flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    // Basically we want it to cover the parent 
+    // ul, but not the top
+    > ul {
+      @include fit-parent;
+      z-index: 1000;
+
+      .back > a {
+        @include flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $mercury;
+
+        .back-btn {
+          color: $edward;
+        }
+      }
+    }
+  }
+
+  .brand-bar {
+    height: 50px;
+
+    .navbar-brand.logo img {
+      width: 86px;
+    }
+
+    .ion-ios-close-empty {
+      color: $space;
+      font-size: 3em;
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    position: relative;
+    padding: 0;
+    list-style: none;
+
+    > .item a {
+      @include font-size(18px);
+      display: flex;
+      align-items: middle;
+      padding: 12px;
+      font-weight: bold;
+
+      &,
+      &:link {
+        color: $edward;
+        text-decoration: none;
+      }
+    }
+
+    > .item.active > a {
+      color: $space;
+      background-color: $wild-sand;
+    }
+  }
+}

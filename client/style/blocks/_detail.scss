@@ -1,0 +1,267 @@
+$carousel-height: 450px;
+
+.detail {
+  > .container {
+    box-sizing: border-box;
+    padding: 12px;
+    // When images are present set min-height
+    &.images-height {
+      min-height: $carousel-height + 24px;
+    }
+    > .images {
+      @include desktop {
+        @include float-column-50;
+
+        width: calc(50% - 24px);
+        max-width: calc(50% - 24px);
+      }
+      .slider-wrapper {
+        background-color: $white;
+        height: 100%;
+      }
+
+      .slider-frame,
+      .slider-decorator,
+      .slider-list,
+      .image-container {
+        height: $carousel-height;
+        min-height: $carousel-height;
+        max-height: $carousel-height;
+      }
+
+      &,
+      .slider-slide,
+      .image-container {
+        max-width: 100%;
+      }
+
+      .slider-wrapper.empty {
+        display: none;
+      }
+
+    }
+
+    @include desktop {
+      // All these pretty much only apply
+      // when images is present
+      .images ~ .title,
+      .images ~ .disclosure,
+      .images ~ .user-info,
+      .images ~ .info-bar,
+      .images ~ .spotlight-wrapper,
+      .images ~ .caption,
+      .images ~ .purchase-info,
+      .images ~ .description,
+      .images ~ .toolbar-footer {
+        margin-left: auto;
+        width: calc(50% - 12px);
+        padding-left: 12px;
+      }
+      .images ~ .title,
+      .images ~ .info-bar,
+      .images ~ .spotlight-wrapper,
+      .images ~ .caption,
+      .images ~ .purchase-info,
+      .images ~ .description,
+      .images ~ .toolbar-footer {
+        margin-top: 12px;
+        margin-bottom: 0;
+      }
+    }
+
+    @include mobileAndTablet {
+      @include flexbox;
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+
+      > .title {
+        @include order(2);
+      }
+
+      > .user-info {
+        @include order(1);
+      }
+
+      > .info-bar {
+        @include order(4);
+      }
+
+      > .images {
+        @include order(5);
+      }
+
+      > .purchase-info {
+        @include order(6);
+      }
+
+      > .description {
+        @include order(10);
+      }
+
+      > .caption {
+        @include order(8);
+      }
+
+      > .toolbar-footer {
+        @include order(9);
+      }
+
+      > .spotlight-wrapper {
+        @include order(11);
+      }
+    }
+
+    @include mobileAndTablet {
+      > * {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        padding: 0;
+      }
+    }
+
+    > .description {
+      @include font-size(12px);
+    }
+
+    > .description,
+    > .caption {
+      word-break: break-word;
+    }
+
+    > .disclosure {
+      @include font-size(12px);
+      > a:link {
+        text-decoration: none;
+        color: $edward;
+      }
+      > a:visited {
+        text-decoration: none;
+        color: $edward;
+      }
+      color: $edward;
+      text-align: right;
+    }
+
+    .toolbar-footer {
+      > div {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $iron;
+      }
+    }
+
+    .title {
+      font-size: em(20px);
+      font-weight: 400;
+      word-break: break-word;
+
+      @include desktop {
+        font-size: em(30px);
+      }
+    }
+
+    > .info-bar {
+      display: block;
+
+      .counts-wrap {
+        border-top: 1px solid $iron;
+        border-bottom: 1px solid $iron;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        height: 30px;
+
+        > ul {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    > .info-bar,
+    > .user-info {
+      .counts-wrap {
+        padding-left: 0;
+        margin-top: 8px;
+        > .attach,
+        > .like {
+          height: 30px;
+          padding-right: 9px;
+
+          > i,
+          > span {
+            vertical-align: middle;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+
+    > .info-bar + .toolbar-footer > ul {
+      border-top: 0 solid transparent;
+    }
+
+    > .purchase-info {
+      @include flexbox;
+      justify-content: space-between;
+      align-items: center;
+
+      > button {
+        width: 200px;
+      }
+
+      > div {
+        text-align: right;
+        > p {
+          margin-bottom: 0;
+          font-size: 18px;
+        }
+        > .retailer {
+          font-weight: bold;
+        }
+
+        > .price {
+          color: $turquoise;
+        }
+      }
+
+      padding-top: 6px;
+      padding-bottom: 6px;
+
+      @include mobile-only {
+        flex-direction: column;
+        > button {
+          margin-bottom: 12px;
+        }
+        > div {
+          text-align: center;
+        }
+      }
+    }
+
+    > .user-info {
+      > .user-image {
+        height: 40px;
+        width: 40px;
+        flex-basis: 40px;
+        cursor: pointer;
+        cursor: hand;
+      }
+    }
+
+    .spotlight {
+      cursor: pointer;
+    }
+  }
+
+  &.private {
+    .user-info {
+      &::after {
+        content: 'Private!';
+        color: map-get($detail-view-colors, private);
+      }
+    }
+  }
+}

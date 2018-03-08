@@ -1,0 +1,11 @@
+////
+/// Base:Variables:Fonts:_vertical
+///
+/// @author K Huehn
+/// @content Vertical spacing
+///
+////
+
+/// @name Base
+$line-height-base:  #{22px / $base-font-size} !default; // Optimal for small viewport widths
+$line-height-lg:    #{26px / $base-font-size} !default; // Optimal for desktop widths

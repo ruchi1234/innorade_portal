@@ -1,0 +1,38 @@
+////
+/// Blocks:_brick
+///
+/// @author K Huehn
+/// @content Bricks
+///
+////
+
+.brick {
+  @include flexbox;
+  @include sizes(49%, null);
+  max-width: 49%;
+  
+  transform: translateZ(0);
+
+  @include tablet {
+    @include sizes(300px, null);
+    max-width: 300px;
+    width: 300px;
+  }
+
+  @include desktop {
+    @include sizes(263px, null);
+    max-width: 263px;
+    width: 263px;
+  }
+
+ 
+  > * {
+    margin-left: $brick-padding;
+    margin-right: $brick-padding;
+
+    @include mobile-only {
+      margin-left:  $brick-padding / 2;
+      margin-right: $brick-padding / 2;
+    }
+  }
+}

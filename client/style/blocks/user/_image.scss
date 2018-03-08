@@ -1,0 +1,19 @@
+////
+/// Blocks:User:_image
+///
+/// @author K Huehn
+/// @content User image
+///
+////
+
+&-image {
+	@include inline-block;
+
+	@include sizes($dim);
+
+	+ .user-name {
+		padding-left: 1em;
+		cursor: pointer;
+		cursor: hand;
+	}
+}

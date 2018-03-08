@@ -1,0 +1,33 @@
+////
+/// Blocks:Modal:_overlay
+///
+/// @author K Huehn
+/// @content Modal overlay
+///
+////
+
+.modal {
+	&-backdrop {
+		display: none;
+	}
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+body.modal-open {
+	@include fixed(left 0 right 0);
+	min-height: 0;
+	height: 0;
+
+	&:before {
+		@include fixed(right 0 bottom 0 modal);
+		background-color: map-get($modal-colors, overlay);
+	}
+}

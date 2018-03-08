@@ -1,0 +1,68 @@
+////
+/// Base:Mixins:_truncation
+///
+/// @author K Huehn
+/// @content Text truncation mixins
+///
+////
+
+/// @name Ellipsis
+/// @author Phil LaPier
+/// @link https://gist.github.com/plapier/4954935
+@mixin ellipsis($max-width:'none') {
+	@include inline-block;
+	overflow: hidden;
+
+	max-width: unquote($max-width);
+
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/// @name Truncation
+/// $author Based upon Natalia Onischuk
+/// @link http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/
+/// Limits content to a specific number of lines
+@mixin truncate($lines:1) {
+	overflow: hidden;
+
+	/// Add position
+	@include relative;
+
+	line-height: $line-height-base;
+	max-height: ($lines * 1em) * $line-height-base;
+
+	@include desktop {
+		line-height: $line-height-lg;
+		max-height: ($lines * 1em) * $line-height-lg;
+	}
+
+	margin-right: -1em;
+	padding-right: 1em;
+
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+
+	text-overflow: ellipsis;
+
+	&:after {
+		@include sizes(1em);
+		margin-top: 0.2em;
+		background: $white;
+	}
+
+	@-moz-document url-prefix() {
+		overflow: hidden;
+		@include relative;
+
+		&:before {
+			@include absolute(right 0 bottom 0);
+
+			float: right;
+			content: '\2026';
+			font-effect: outline
+		}
+	}
+}

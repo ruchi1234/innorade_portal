@@ -1,0 +1,23 @@
+////
+/// Blocks:User:_module
+///
+/// @author K Huehn
+/// @content User module
+///
+////
+
+.user {
+  $dim: 50px;
+
+  /// Info
+  @import "{}/client/style/blocks/user/info";
+
+  /// Image
+  @import "{}/client/style/blocks/user/image";
+
+  /// Name
+  @import "{}/client/style/blocks/user/name";
+
+  /// Tag
+  @import "{}/client/style/blocks/user/tag";
+}

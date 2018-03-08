@@ -1,0 +1,22 @@
+////
+/// Base:Variables:Colors:_form
+///
+/// @author K Huehn
+/// @content Form colors
+///
+////
+
+/// @name Label
+$label-colors:  (
+                  text: $space
+                ) !default;
+
+/// @name Inputs
+$input-colors:  (
+                  background:  $haze,
+                  border:      $edward,
+                  highlight:   $scampi,
+                  placeholder: $edward,
+                  text:        $space,
+                  error:       $red
+                ) !default;

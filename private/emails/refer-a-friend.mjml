@@ -1,0 +1,218 @@
+<mjml>
+  <mj-body>
+    <mj-container>
+      <mj-section>
+        <mj-divider
+          border-color="#6563a4"
+          border-width="8px"
+          border-style="solid">
+        </mj-divider>
+        <mj-column
+          vertical-align="middle">
+          <mj-image
+            width="144"
+            align="left"
+            src="{{ROOT_URL}}img/maven/maven_logo.png"
+            href="{{ROOT_URL}}"
+            alt="">
+          </mj-image>
+          <mj-divider
+            border-color="#aeb8b8"
+            border-width="2px"
+            border-style="solid">
+          </mj-divider>
+          <mj-text
+            font-size="14px"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif">
+            Hi,
+          </mj-text>
+          <mj-text
+            font-size="14px"
+            color="#303939;"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif">
+              {{senderFirstName}} is inviting you to join Maven, a social shopping site.
+          </mj-text>
+          <mj-text
+            font-size="16px"
+            color="#49d0bf"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif">
+              {{referralComments}}
+          </mj-text>
+          <!-- <mj-divider
+            border-color="#aeb8b8"
+            border-width="2px"
+            border-style="solid">
+          </mj-divider>
+          <mj-text
+            font-size="22px"
+            font-weight="700"
+            align="center"
+            color="#303939"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif">
+              {{productName}}
+          </mj-text> -->
+        </mj-column>
+      </mj-section>
+      <!-- <mj-section>
+        <mj-column
+            vertical-align="top"
+            width="40%">
+            <mj-image
+              src="http://191n.mj.am/img/191n/3s/xjg.jpg"
+              alt="Clothes set"
+              align="center"
+              border="1px solid #aeb8b8"
+              padding-left="0"
+              padding-right="0"
+              padding-bottom="0"
+              padding-top="0">
+            </mj-image>
+          </mj-column>
+          <mj-column
+            vertical-align="top"
+            width="50%">
+            <mj-text
+              font-size="14px"
+              font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+              font-weight="700">
+                {{retailerDomain}}
+            </mj-text>
+            <mj-text
+              font-size="14px"
+              font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+              font-weight="400"
+              color="#49d0bf">
+                $ {{price}}
+            </mj-text>
+            <mj-group>
+              <mj-column>
+                <mj-image
+                  src="http://191n.mj.am/img/191n/3s/xjg.jpg"
+                  alt="Clothes set"
+                  align="left"
+                  border="1px solid #aeb8b8"
+                  width="75px"
+                  height="75px">
+                </mj-image>
+                <mj-text
+                  font-size="14px"
+                  align="left"
+                  font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+                  font-weight="700">
+                    {{retailerDomain}}
+                </mj-text>
+              </mj-column>
+            </mj-group>
+          </mj-column>
+        </mj-section> -->
+        <mj-section>
+          <mj-column
+            vertical-align="middle">
+          <mj-divider
+            border-color="#aeb8b8"
+            border-width="2px"
+            border-style="solid">
+          </mj-divider>
+          <mj-text
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+            font-size="14px"
+            font-weight="400"
+            color="#6563a4"
+            align="center">
+            At MavenX.com, experts compete for your attention assuring the best recommendations,
+            reviews, and prices. Maven also gives <span style="text-decoration: underline;">you</span> an opportunity to earn when you share your
+            expertise to help others find great products.
+          </mj-text>
+          <mj-button
+            href="{{ROOT_URL}}"
+            align="center"
+            background-color="#6563a4"
+            color="#fff"
+            font-size="22px">
+            Visit Maven
+          </mj-button>
+          <mj-text
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+            font-size="22"
+            font-weight="700"
+            color="#6563a4"
+            align="center">
+            Clip. Share. Earn.
+          </mj-text>
+          <mj-social
+            mode="horizontal"
+            text-mode="false"
+            icon-size="28px"
+            display="facebookcstm instagramcstm pinterestcstm twittercstm"
+            twittercstm-content=""
+            facebookcstm-content=""
+            instagramcstm-content=""
+            pinterestcstm-content=""
+            twittercstm-href="https://twitter.com/MavenXInc"
+            facebookcstm-href="https://www.facebook.com/MavenX"
+            instagramcstm-href="https://www.instagram.com/mavenxinc"
+            pinterestcstm-href="https://www.pinterest.com/MavenX"
+            facebookcstm-icon="{{ROOT_URL}}img/emails/facebook-ico.png"
+            instagramcstm-icon="{{ROOT_URL}}img/emails/instagram-ico.png"
+            pinterestcstm-icon="{{ROOT_URL}}img/emails/pinterest-ico.png"
+            twittercstm-icon="{{ROOT_URL}}img/emails/twitter-ico.png"
+            facebookcstm-icon-color="#fff"
+            instagramcstm-icon-color="#fff"
+            pinterestcstm-icon-color="#fff"
+            twittercstm-icon-color="#fff"
+          />
+          <mj-divider
+            border-color="#aeb8b8"
+            border-width="2px"
+            border-style="solid">
+          </mj-divider>
+        </mj-divider>
+        <mj-table>
+          <tr style="text-align:right; padding:15px 0;">
+            <th style="padding: 0 15px 0 0;"></th>
+            <th style="padding: 0 15px;"></th>
+          </tr>
+          <tr>
+            <td style="font-size: 22px;text-align: right;width: 50%;padding: 5px 15px;">
+              <a style="color: #303939; text-decoration: none;" href="http://about.mavenx.com/new-to-maven">
+                FAQs
+              </a>
+            </td>
+            <td style="font-size: 22px;text-align: left;width: 50%;padding: 5px 15px;">
+              <a style="color: #303939; text-decoration: none;" href="http://about.mavenx.com/why-maven">
+                Why Maven
+              </a>
+            </td>
+          </tr>
+          <tr style="height: 14px;">
+            <td style="font-size: 12px;text-align: right;width: 50%;padding: 0px 15px; border-right: 1px solid #aeb8b8;">
+              <a style="color: #303939; text-decoration: none;" href="http://about.mavenx.com/privacy-policy">
+                Privacy Policy
+              </a>
+            </td>
+            <td style="font-size: 12px;text-align: lleft;width: 50%;padding: 0px 15px;">
+              <a style="color: #303939; text-decoration: none;" href="http://about.mavenx.com/terms-of-service">
+                Terms of Service
+              </a>
+            </td>
+          </tr>
+        </mj-table>
+
+          <!-- <mj-text
+            font-size="12px"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+            align="center">
+              <a href="#" style="color:#aeb8b8;">Unsubscribe</a>
+          </mj-text> -->
+          <mj-text
+            font-size="12px"
+            color="#303939;"
+            font-family="Arial, Ubuntu, Helvetica, sans-serif, Helvetica, Arial, sans-serif"
+            align="center">
+              Copyright © ​2016 ​Maven​ Exhange Inc., All rights reserved.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-container>
+  </mj-body>
+</mjml>

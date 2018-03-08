@@ -1,0 +1,23 @@
+.categories-select {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 0;
+  > li {
+    display: inline-block;
+    margin-bottom: 8px;
+    width: calc(25% - 4px);
+
+    @include mobile-only {
+      width: calc(50% - 4px);
+    }
+
+    @include tablet {
+      width: calc(33% - 4px);
+    }
+    img {
+      max-width: 95%;
+      height: auto;
+      width: 95%;
+    }
+  }
+}

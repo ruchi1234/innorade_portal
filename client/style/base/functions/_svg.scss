@@ -1,0 +1,50 @@
+////
+/// Base:Functions:_svg
+///
+/// @author K Huehn
+/// @content SVG functions
+///
+////
+
+/// @name Wrap-SVG
+/// Wraps string in svg tags
+@function wrap-svg($svg:null, $viewBox:'') {
+	@if $svg != null {
+		$svg:   unquote($svg);
+		$xmlns: 'xmlns="http://www.w3.org/2000/svg"';
+		$xlink: 'xmlns:xlink="http://www.w3.org/1999/xlink"';
+		$xs:    '';
+
+		@if str-index($svg, '<svg') != 1 {
+			$svg: '<svg>#{$svg}</svg>';
+		}
+
+		@if str-index($svg, 'xmlns=') == null {
+			$xs: '#{$xs} #{$xmlns}';
+		}
+
+		@if str-index($svg, 'xmlns:xlink=') == null {
+			$xs: '#{$xs} #{$xlink}';
+		}
+
+		@if $viewBox != '' and str-index($svg, 'viewBox=') == null {
+			$xs: '#{$xs} viewBox="#{$viewBox}"';
+		}
+
+		$svg: str-insert(unquote($svg), $xs, 5);
+		$svg: utf-uri($svg);
+		@return unquote($svg);
+	}
+	@return $svg;
+}
+
+/// @name Wrap-SVG-URI
+/// Wrap data URI SVG inside a url() property
+@function wrap-svg-uri($uri:null, $viewBox:'') {
+	@if $uri != null {
+		$uri: wrap-svg($uri, $viewBox);
+
+		@return unquote('url("#{$uri}")');
+	}
+	@return $uri;
+}

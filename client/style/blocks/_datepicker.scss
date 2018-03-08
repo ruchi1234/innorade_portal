@@ -1,0 +1,16 @@
+#ui-datepicker-div {
+  @include shadow;
+  background-color: white;
+
+  .ui-datepicker-next {
+    float: right;
+  }
+
+  .ui-icon {
+    padding: 3px;
+  }
+}
+
+.date-input {
+  cursor: pointer;
+}

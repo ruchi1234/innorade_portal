@@ -1,0 +1,21 @@
+////
+/// Base:Variables:Colors:_brick
+///
+/// @author K Huehn
+/// @content Brick colors
+///
+////
+
+
+/// @name Bricks
+$brick-colors:                      (
+                                      background:    $white,
+                                      icon:          $turquoise,
+                                      link:          $edward,
+                                      text:          $space,
+                                      footer-border: $iron,
+                                      footer-bg:     $wild_sand
+                                    ) !default;
+$brick-icon-colors:                 (
+                                      outline: $edward
+                                    ) !default;

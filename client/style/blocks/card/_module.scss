@@ -1,0 +1,114 @@
+////
+/// Blocks:Card:_module
+///
+/// @author K Huehn
+/// @content Cards module
+///
+////
+
+.card {
+	@include flex-direction(column);
+	@include justify-content(space-between);
+
+	@include sizes(100%,null);
+  
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
+  
+  //max-height: calc(100vh - 35px);
+
+	color: map-get($brick-colors, text);
+	background-color: map-get($brick-colors, background);
+	@include shadow;
+
+  // Semibold font weight
+  .product-title {
+    font-weight: 600;
+  }
+
+	&,
+	.images,
+	.caption {
+		@include flexbox;
+		@include flex-direction(column);
+	}
+
+  &.unlocked {
+    .user-info {
+      &:after {
+        @include inline-block(middle);
+
+        @include unlocked(map-get($brick-icon-colors, outline), '100% 40%');
+        background-repeat: none;
+        margin-left: auto;
+
+        content: '';
+      }
+    }
+  }
+
+	.user-info,
+	.images {
+		margin: 15px;
+	}
+
+	> header {
+		margin-bottom: auto;
+
+		#user-detail {
+			padding: 10px;
+		}
+
+		.image-container {
+			margin-right: 10px;
+		}
+	}
+
+  .caption {
+    word-wrap: break-word;
+  }
+
+  .counts {
+    list-style-type: none;
+    padding-left: 0;
+    > .attach,
+    > .like {
+      display: flex;
+      align-items: center;
+      line-height: 100%;
+      vertical-align: middle;
+      color: $edward;
+ 
+      .glyphicon:before {
+        color: $turquoise;
+        padding-right: 3px;
+      }
+    }
+  }
+
+  .card-footer {
+	  border-top: 1px solid map-get($brick-colors, footer-border);
+    padding: 6px;
+    &.board-title {
+      padding: 15px;
+    }
+    > p {
+      margin: 0;
+
+    }
+  }
+
+  .images + .user-info-block {
+    padding-top: 0;
+  }
+
+  &.cursor {
+    cursor: pointer;
+  }
+
+	/// images
+	@import "{}/client/style/blocks/card/images";
+
+	/// Footer
+	@import "{}/client/style/blocks/card/toolbar";
+}

@@ -1,0 +1,54 @@
+////
+/// Blocks:Login:_buttons
+///
+/// @author
+/// @content Login buttons
+///
+////
+
+
+.btn {
+  &-sign-in,
+  &-register {
+    font-weight: 400;
+		@include sizes(100%,null);
+		margin-top: 6px;
+
+		color: $white;
+		background-color: $scampi;
+
+		@extend .form-control;
+  }
+}
+
+/// Social
+.social-button {
+	@include sizes(100%,null);
+  &:hover {
+    box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+  }
+}
+
+/// Login mode
+.login-mode-toggle {
+  box-shadow: none;
+  border: 1px solid $scampi;
+  width: 100%;
+  margin: 0 0 15px;
+  color: $white;
+  background-color: $scampi;
+  font-weight: 400;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-transform: none;
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  &:hover{
+    background-color: $white;
+    border: 1px solid $scampi;
+    color: $scampi;
+  }
+}

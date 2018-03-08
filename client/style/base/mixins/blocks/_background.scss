@@ -1,0 +1,20 @@
+////
+/// Base:Mixins:Blocks:_background
+///
+/// @author K Huehn
+/// @content Background mixins
+///
+////
+
+/// @name Multiple background
+/// multiple image w/fallback
+@mixin multiple-background($background:null, $fallback:null) {
+	@if $background != null {
+
+		@if $fallback != null {
+			background-image: $fallback;
+		}
+
+		background-image: none, unquote($background);
+	}
+}

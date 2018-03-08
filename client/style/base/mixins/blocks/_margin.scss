@@ -1,0 +1,32 @@
+////
+/// Base:Mixins:Blocks:_margin
+///
+/// @author K Huehn
+/// @content Margin blocks
+///
+////
+
+/// @name Autospread
+/// auto margins to separate columns
+@mixin autoSpread($left:null, $right:'', $other:null) {
+	@if $left != null {
+		#{$left} {
+			margin-left: 0;
+			margin-right: auto;
+		}
+
+		@if $right != '' {
+			#{$right} {
+				margin-left: auto;
+				margin-right: 0;
+			}
+		}
+
+		@if $other != null {
+			#{$other} {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}

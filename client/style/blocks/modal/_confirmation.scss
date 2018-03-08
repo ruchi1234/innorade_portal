@@ -1,0 +1,19 @@
+.confirmation {
+  @include flexbox;
+  @include fit-parent;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px;
+
+  h4 {
+    @include font-size(18px);
+    text-align: center;
+  }
+
+  p {
+    @include font-size(18px);
+    text-align: center;
+  }
+}

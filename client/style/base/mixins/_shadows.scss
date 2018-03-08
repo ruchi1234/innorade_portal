@@ -1,0 +1,18 @@
+////
+/// Base:Mixins:_shadows
+///
+/// @author K Huehn
+/// @content Shadow mixins
+///
+////
+
+/// Import base colors
+@import "../variables/colors/base";
+
+/// @name Shadow
+/// Mixin to generate standard shadow for Maven elements
+@mixin shadow($size:5px) {
+	-webkit-box-shadow: 0 0 $size rgba($space, 0.65);
+	   -moz-box-shadow: 0 0 $size rgba($space, 0.65);
+	        box-shadow: 0 0 $size rgba($space, 0.65);
+}

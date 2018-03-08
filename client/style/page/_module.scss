@@ -1,0 +1,34 @@
+////
+/// Page:_module
+///
+/// @author K Huehn
+/// @content Page structure
+///
+////
+
+/// Body
+@import "{}/client/style/page/body/module";
+
+/// Headers
+@import "{}/client/style/page/headers/module";
+
+/// Footers
+@import "{}/client/style/page/footers/module";
+
+/// Navigation
+@import "{}/client/style/page/nav/module";
+
+/// Tables
+@import "{}/client/style/page/tables/module";
+
+/// Buttons
+@import "{}/client/style/page/buttons/module";
+
+/// Login
+@import "{}/client/style/page/login/module";
+
+/// Main content
+@import "{}/client/style/page/main/module";
+
+/// Users
+@import "{}/client/style/page/users/module";

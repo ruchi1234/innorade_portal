@@ -1,0 +1,29 @@
+@mixin multiLineEllipsis($font-size: 18px, $lineHeight: 1.2, $lineCount: 1, $bgColor: white){
+  overflow: hidden;
+  position: relative;
+
+  @include mobile-only {
+    font-size: $font-size*0.85;
+  }
+  font-size: $font-size;
+  line-height: $lineHeight;
+
+  @include mobile-only {
+    height: ($font-size*0.85)*$lineHeight*$lineCount;
+  }
+  height: $font-size*$lineHeight*$lineCount;
+  -webkit-line-clamp: $lineCount;
+  -webkit-box-orient: vertical;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}

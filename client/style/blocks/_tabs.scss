@@ -1,0 +1,71 @@
+////
+/// Page:Nav:_tab
+///
+/// @author K Huehn
+/// @content Tabs
+///
+////
+
+.nav-tabs {
+  @include flexbox;
+
+  line-height: 45px;
+	font-weight: 700;
+  background-color: map-get($tab-bar-colors, background);
+
+	padding-right: 0;
+
+	text-align: center;
+
+	color: map-get($tab-bar-colors, text);
+	border-bottom: 0 none;
+
+	@include mobile-only {
+		@include sizes(100%,null);
+		line-height: #{40px / $base-font-size};
+		margin: 0;
+	}
+
+	> li {
+		margin-bottom: 0;
+
+		@include mobile-only {
+			@include flex(1 0 0);
+		}
+
+		> a {
+			line-height: inherit;
+
+			margin: 0;
+			padding: 0 2em;
+
+			transition: all .25s ease-in-out;
+
+			@extend %no-border-radius;
+			@include bbReset;
+
+			&:hover {
+				color: lighten(map-get($tab-bar-colors, text), 100%) !important;
+				border-bottom-color: $transparent;
+				background-color: darken(map-get($tab-bar-colors, background), 10%);
+			}
+
+			@include mobile-only {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+		}
+	}
+
+	> li.active {
+
+		> a {
+
+			&,
+			&:focus,
+			&:hover {
+				@include colorInherit;
+			}
+		}
+	}
+}

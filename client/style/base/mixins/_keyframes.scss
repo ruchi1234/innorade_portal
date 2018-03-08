@@ -1,0 +1,20 @@
+////
+/// Base:Mixins:_keyframes
+///
+/// @author K Huehn
+/// @content Keyframe mixin
+///
+////
+
+/// @name Keyframes
+@mixin keyframes($name:null) {
+	@if $name != null {
+		$name: unquote($name);
+
+		@-webkit-keyframes #{$name} {@content;}
+		@-moz-keyframes #{$name} {@content;}
+		@-ms-keyframes #{$name} {@content;}
+		@-o-keyframes #{$name} {@content;}
+		@keyframes #{$name} {@content;}
+	}
+}

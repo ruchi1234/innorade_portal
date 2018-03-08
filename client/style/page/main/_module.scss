@@ -1,0 +1,21 @@
+////
+/// Page:Main:_module
+///
+/// @author K Huehn
+/// @content Main content pieces
+///
+////
+
+main {
+	display: block;
+
+	main {
+		display: none;
+	}
+}
+
+/// @name Boards
+@import "{}/client/style/page/main/boards";
+
+/// @Name Mavelets
+@import "{}/client/style/page/main/mavelet";

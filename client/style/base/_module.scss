@@ -1,0 +1,19 @@
+////
+/// Base:_module
+///
+/// @author K Huehn
+/// @content Base module to assemble variables, functions, mixins
+///
+////
+
+/// @name Variables
+/// base values (colors, font sizes, etc)
+@import "{}/client/style/base/variables/module";
+
+/// @name Functions
+/// sass functions
+@import "{}/client/style/base/functions/module";
+
+/// @name Mixins
+/// sass mixins
+@import "{}/client/style/base/mixins/module";

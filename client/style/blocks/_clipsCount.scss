@@ -1,0 +1,13 @@
+.clips-count {
+  .glyphicon {
+    color: map-get($brick-colors, link);
+
+    &::before {
+      @include inline-block(middle);
+
+      margin-right: 0.25em;
+
+      color: map-get($brick-colors, icon);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+////
+/// Base:Mixins:_font
+///
+/// @author K Huehn
+/// @content Font mixins
+///
+////
+
+/// @name Load base font size definitions
+@import "{}/client/style/base/variables/fonts/sizes";
+
+/// @name Load font functions
+@import "{}/client/style/base/functions/fonts";
+
+/// @name Font size mixin
+@mixin font-size($size:null) {
+	@if $size != null {
+		// *font-size: $size;
+		font-size: calculateRem($size, $base-font-size);
+	}
+	@content;
+}

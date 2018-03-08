@@ -1,0 +1,7 @@
+.my-contacts-select {
+  > .form-control {
+    height: auto;
+    max-height: 150px;
+    overflow-y: scroll;
+  }
+}

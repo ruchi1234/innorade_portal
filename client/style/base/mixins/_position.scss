@@ -1,0 +1,51 @@
+////
+/// Base:Mixins:_position
+///
+/// @author K Huehn
+/// @content Positioning mixins
+///
+////
+
+/// @name Position
+/// Mixin to generate positions
+@mixin position($position:null, $args:()) {
+	@if $position != null and index(static relative absolute fixed sticky, $position) {
+		position: $position;
+
+		@each $o in top right bottom left {
+			$i: index($args, $o);
+
+			@if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number  {
+				#{$o}: nth($args, $i + 1);
+			}
+		}
+
+		@each $z in $stacks {
+			$i: index($args, $z);
+
+			@if $i and $i <= length($args) {
+				@include stack($z);
+			}
+		}
+	}
+
+	@content;
+}
+
+/// @name Absolute position
+/// Mixin to generate absolute position
+@mixin absolute($args:()) {
+	@include position(absolute, $args);
+}
+
+/// @name Relative position
+/// Mixin to generate relative position
+@mixin relative($args:()) {
+	@include position(relative, $args);
+}
+
+/// @name Fixed position
+/// Mixin to generate relative position
+@mixin fixed($args:()) {
+	@include position(fixed, $args);
+}

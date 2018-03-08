@@ -1,0 +1,58 @@
+////
+/// Page:Nav:_links
+///
+/// @author K Huehn
+/// @content Navigational links
+///
+////
+
+
+> li {
+	> a {
+		user-select: none;
+
+		> span {
+			@include relative;
+
+			padding: 0 0 6px;
+
+			// border-bottom: 3px solid map-get($navbar-default-colors, border);
+
+			&:after {
+				@include absolute(left 0 bottom -4px);
+
+				display: block;
+
+				@include sizes(100%,3px);
+
+				content: '';
+
+			}
+		}
+	}
+}
+
+/// Active links
+.active {
+
+	color: map-get($top_header_colors, active);
+
+	> a {
+		background-color: map-get($navbar-default-colors, background);
+
+		> span {
+
+			@include desktop {
+
+				&:after {
+					background-color: map-get($navbar_nav_colors, underline);
+				}
+			}
+		}
+	}
+}
+
+/// Anchors
+a {
+	@extend %link-color;
+}

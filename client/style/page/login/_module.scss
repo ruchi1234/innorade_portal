@@ -1,0 +1,31 @@
+////
+/// Blocks:Login:_module
+///
+/// @author
+/// @content Login
+///
+////
+
+
+.login {
+  text-align: center;
+  p {
+    margin: 0 0 20px 0;
+  }
+  .forgot-password {
+    padding: 0;
+    text-align: center;
+    a {
+      color: $turquoise;
+      &:hover {
+        color: rgba(73, 208, 191, 0.9);
+      }
+    }
+  }
+
+  /// Buttons
+  @import "{}/client/style/page/login/buttons";
+
+  /// Form
+  @import "{}/client/style/page/login/form";
+}

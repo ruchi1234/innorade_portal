@@ -1,0 +1,20 @@
+////
+/// Page:Buttons:Icon:_flag
+///
+/// @author K Huehn
+/// @content Flag button
+///
+////
+
+.flag & {
+	@include flag-icon(none, map-get($icon-button-colors, rest));
+
+	&:hover,
+	&:active {
+		@include flag-icon(none, map-get($icon-button-colors, hover));
+	}
+}
+
+.flag.active & {
+	@include flag-icon(map-get($icon-button-colors, active), $white);
+}

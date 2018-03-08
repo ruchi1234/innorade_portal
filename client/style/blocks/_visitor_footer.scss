@@ -1,0 +1,67 @@
+.visitor-footer.navbar {
+  @include flexbox;
+  justify-content: space-between;
+  min-height: 35px;
+  height: 35px;
+  font-size: 12px;
+  transition: transform 0.3s ease-in-out;
+
+  @include desktop {
+    font-size: 14px;
+  }
+
+  color: $edward;
+  background-color: $wild_sand;
+  border-top: 1px solid $iron;
+
+  > ul {
+    @include flexbox;
+    margin: 0;
+
+    &,
+    > li,
+    > li > a {
+      line-height: 100%;
+      vertical-align: center;
+    }
+
+    > li > a {
+      max-width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 6px;
+      padding-right: 6px;
+
+      @include tablet {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @include desktop {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .copyright {
+    @include flex(0 1 auto);
+    overflow: hidden;
+
+    > li > a {
+      font-weight: normal;
+    }
+  }
+
+  // some specific unset's from bootstrap
+  .navbar-default .navbar-nav > li + li {
+    padding-left: 0;
+  }
+
+  &::before,
+  &::after {
+    content: none !important;
+  }
+}

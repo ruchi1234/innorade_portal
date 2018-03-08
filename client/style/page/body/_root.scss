@@ -1,0 +1,23 @@
+////
+/// Page:Body:_root
+///
+/// @author K Huehn
+/// @content Root styles
+///
+////
+
+html {
+	font-size:   $base-font-size;
+
+	@include sizes(null,100%);
+}
+
+body {
+	font: normal 400 1em/#{$line-height-base} $base-font-family;
+
+	min-height:  100%;
+
+	@include desktop {
+		line-height: $line-height-lg;
+	}
+}

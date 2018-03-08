@@ -1,0 +1,66 @@
+////
+/// Base:Mixins:_breakpoints
+///
+/// @author K Huehn
+/// @content Breakpoints mixins
+///
+////
+
+/// Import defaults
+@import "../variables/page/module";
+
+/// @name Breakpoint mixin
+@mixin breakpoint($break:null) {
+	@if $break != null {
+		// Small. Above 34em (544px)
+		@if $break == mobile {
+			@media screen and (min-width: #{ nth(map-get($grid-breakpoints, sm), 1) }) { @content; }
+			// @media (max-width:#{map-get($breakpoints, screen-xs-min)}) { @content; }
+		}
+		@else if $break == mobile-only {
+			@media screen and (max-width: #{ nth(map-get($grid-breakpoints, md), 1) }) { @content; }
+			// @media (max-width:#{map-get($breakpoints, screen-xs-min)}) { @content; }
+		}
+		@else if $break == tablet {
+			@media screen and (min-width: #{ nth(map-get($grid-breakpoints, md), 1) }) { @content; }
+			// @media (min-device-width:#{map-get($breakpoints, screen-sm-min)}) and (min-width:#{map-get($breakpoints, screen-sm-min)}) { @content; }
+		}
+		@else if $break == mobileAndTablet {
+			@media screen and (max-width: #{ nth(map-get($grid-breakpoints, lg), 1) }) { @content; }
+			// @media screen and (max-width: #{ nth(map-get($grid-breakpoints, md), 1) }) { @content; }
+			// @media (min-device-width:#{map-get($breakpoints, screen-sm-min)}) and (min-width:#{map-get($breakpoints, screen-sm-min)}) { @content; }
+		}
+		@else if $break == desktop {
+			@media screen and (min-width: #{ nth(map-get($grid-breakpoints, lg), 1) }) { @content; }
+			// @media (min-width: #{map-get($breakpoints, screen-md-min)}) { @content; }
+		}
+		@else if $break == desktop-lg {
+			@media screen and (min-width: #{ nth(map-get($grid-breakpoints, xl)), 1 }) { @content; }
+			// @media screen and (min-width: #{map-get($grid-breakpoints, xl)}) { @content; }
+		}
+		@else {
+			@media (unquote($break)) { @content; }
+		}
+	}
+}
+
+/// @name Shortcuts
+@mixin mobile-only {
+	@include breakpoint(mobile-only) { @content; }
+}
+
+@mixin mobile {
+	@include breakpoint(mobile) { @content; }
+}
+
+@mixin mobileAndTablet {
+	@include breakpoint(mobileAndTablet) { @content; }
+}
+
+@mixin tablet {
+	@include breakpoint(tablet) { @content; }
+}
+
+@mixin desktop {
+	@include breakpoint(desktop) { @content; }
+}

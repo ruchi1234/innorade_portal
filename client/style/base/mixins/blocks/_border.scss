@@ -1,0 +1,24 @@
+////
+/// Base:Mixins:Blocks:_border
+///
+/// @author K Huehn
+/// @content Border blocks
+///
+////
+
+/// @name NoBorderRadius
+/// No border radius
+@mixin noBorderRadius {
+	border-radius: 0 !important;
+
+	@content;
+}
+
+/// @name BBReset
+/// Background/border reset
+@mixin bbReset {
+	background-color: $transparent;
+		border-color: $transparent;
+
+	@content;
+}

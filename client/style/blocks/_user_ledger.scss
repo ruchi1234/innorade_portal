@@ -1,0 +1,68 @@
+////
+/// Blocks:_user_ledger
+///
+/// @author
+/// @content User ledger
+///
+////
+
+
+.my-user-ledger {
+  margin-top: 60px;
+
+  .row {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .payment {
+    color: darken($turquoise, 20%);
+  }
+
+  .row.filters .col {
+    @include relative;
+
+    @include sizes(null, 70px);
+  }
+
+  // .btn-filter {
+    //     @include absolute(bottom 0):
+  // }
+
+  label {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  .filters label {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  .current-balance {
+    font-size: 1.5em;
+
+    color: darken($turquoise, 20%);
+  }
+
+  table {
+    margin-top: 20px;
+  }
+
+  input.filter {
+    @include mobileAndTablet {
+      float: right;
+    }
+  }
+}
+
+::-webkit-datetime-edit {
+  font-family: $raleway-font-family !important;
+}
+
+input.date-input::-webkit-outer-spin-button, /* Removes arrows */
+input.date-input::-webkit-inner-spin-button, /* Removes arrows */
+input.date-input::-webkit-clear-button { /* Removes blue cross */
+  -webkit-appearance: none;
+  margin: 0;
+}

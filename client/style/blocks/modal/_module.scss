@@ -1,0 +1,28 @@
+////
+/// Blocks:Modal:_module
+///
+/// @author K Huehn
+/// @content Modal module
+///
+////
+
+/// Overlay
+@import "{}/client/style/blocks/modal/overlay";
+
+/// Dialog
+@import "{}/client/style/blocks/modal/dialog";
+
+/// Content
+@import "{}/client/style/blocks/modal/content";
+
+/// Header
+@import "{}/client/style/blocks/modal/header";
+
+/// Footer
+@import "{}/client/style/blocks/modal/footer";
+
+/// Body
+@import "{}/client/style/blocks/modal/body";
+
+/// Uploads
+@import "{}/client/style/blocks/modal/uploads";

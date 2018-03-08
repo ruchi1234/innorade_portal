@@ -1,0 +1,54 @@
+$icon-size: 25px;
+
+.pinterest-icon {
+  background-color: $pinterest;
+}
+
+.facebook-icon {
+  background-color: $facebook;
+}
+
+.twitter-icon {
+  background-color: $twitter;
+}
+
+.email-icon {
+  background-color: $iron;
+}
+
+.aurl-icon {
+  background-color: $scampi;
+}
+
+.embed-code-icon {
+  background-color: $mineshaft;
+}
+
+.facebook-icon,
+.pinterest-icon,
+.email-icon,
+.embed-code-icon,
+.aurl-icon,
+.twitter-icon {
+  @include flexbox;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  height: $icon-size;
+  width: $icon-size;
+}
+
+.facebook-icon,
+.pinterest-icon,
+.twitter-icon {
+  font-size: $icon-size*3/4;
+  padding: 4px 0 0 !important;
+}
+
+.aurl-icon,
+.email-icon,
+.embed-code-icon {
+  font-size: $icon-size*7/12;
+  padding: 0 !important;
+}

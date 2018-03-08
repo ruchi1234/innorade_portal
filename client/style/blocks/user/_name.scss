@@ -1,0 +1,12 @@
+////
+/// Blocks:User:_name
+///
+/// @author K Huehn
+/// @content User name
+///
+////
+
+&-name {
+	@include ellipsis;
+	margin-right: auto;
+}

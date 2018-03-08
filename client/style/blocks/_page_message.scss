@@ -1,0 +1,12 @@
+.page-message {
+  @include flex-center-child;
+  @include font-size(18px);
+
+  position: relative;
+  min-height: 300px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-align: center;
+}

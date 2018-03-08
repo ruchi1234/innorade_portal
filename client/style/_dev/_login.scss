@@ -1,0 +1,109 @@
+.login {
+  div {
+    div {
+      h3 {
+        font-weight: 400;
+        margin-top: 0;
+      }
+      font-weight: 200;
+      div {
+        &.row {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-content: center;
+          .social-button-container {
+            margin-bottom: 5px;
+            a {
+              color: $white;
+              display: table;
+              height: 50px;
+              text-decoration: none;
+              width: 200px;
+              margin: 0 auto;
+              &:hover {
+                box-shadow: 3px 3px 3px -3px rgba(0, 0, 0, 0.75);
+              }
+              i {
+                display: table-cell;
+                vertical-align: middle;
+                width: 50px;
+                font-size: 31px;
+                pointer-events: none;
+              }
+              span {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: right;
+                padding-right: 20px;
+                font-size: 10px;
+                pointer-events: none;
+              }
+              &.facebook-login {
+                background-color: $facebook;
+                i {
+                  border-right: 1px solid rgba(79, 112, 179, 0.42);
+                }
+              }
+              &.twitter-login {
+                background-color: $twitter;
+                i {
+                  border-right: 1px solid rgba(93, 178, 230, 0.63);
+                }
+              }
+              &.google-login {
+                background-color: $google;
+                i {
+                  border-right: 1px solid rgba(169, 105, 100, 0.48);
+                }
+              }
+            }
+          }
+        }
+      }
+      form {
+        input {
+          margin: 15px 0;
+          box-shadow: none;
+          background: #eff1f1;
+          height: 50px;
+          line-height: 50px !important;
+          border-radius: 0;
+          font-size: 18px;
+          text-transform: none;
+          border-color: #aeb8b8;
+          padding: 0 0 0 12px;
+          &:focus {
+            border: 1px solid $scampi;
+            box-shadow: none;
+          }
+        }
+        button {
+          box-shadow: none;
+          border: 1px solid $scampi;
+          border-radius: 5px;
+          height: 50px;
+          font-size: 18px;
+          text-transform: none;
+          &:focus {
+            box-shadow: none;
+            outline: none;
+          }
+          &:hover{
+            background-color: $white;
+            border: 1px solid $scampi;
+            color: $scampi;
+          }
+        }
+      }
+      p {
+        a {
+          color: $turquoise;
+          &:hover {
+            color: rgba(73, 208, 191, 0.9);
+          }
+        }
+      }
+    }
+  }
+}

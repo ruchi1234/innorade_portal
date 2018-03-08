@@ -1,0 +1,24 @@
+////
+/// Blocks:Card:_toolbar
+///
+/// @author K Huehn
+/// @content Card footer
+///
+////
+
+
+.toolbar-footer {
+	margin-top: auto;
+	padding: 10px;
+
+	border-top: 1px solid map-get($brick-colors, footer-border);
+	background-color: map-get($brick-colors, footer-bg);
+
+	@include desktop {
+		padding: 15px;
+	}
+
+	.navbar-nav {
+		margin: 0;
+	}
+}

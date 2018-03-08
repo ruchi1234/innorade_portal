@@ -1,0 +1,44 @@
+////
+/// Blocks:Card:_images
+///
+/// @author K Huehn
+/// @content Card images
+///
+////
+
+.images {
+	@include justify-content(space-between);
+	@include flex(1 0 auto);
+
+	> .image-container {
+		@include sizes(null, auto);
+
+		@include flex(1 0 auto);
+
+		img {
+			@include sizes(null, auto);
+		}
+	}
+
+	> .thumbnails,
+	> .caption {
+		@include flex(0 0 auto);
+	}
+
+	.caption {
+		margin: 15px 0 0;
+    &:first-child {
+      margin-top: 0px;
+    }
+	}
+
+	.product-title {
+		font-size: em(18px);
+		font-weight: 500;
+		line-height: inherit;
+
+		@include truncate(2);
+
+		margin: 0;
+	}
+}

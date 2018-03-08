@@ -1,0 +1,45 @@
+////
+/// Blocks:Modal:_header
+///
+/// @author K Huehn
+/// @content Modal header
+///
+////
+
+.modal-header {
+  display: inherit;
+
+  @include justify-content(space-between);
+  @include flex(0 0 $header-height);
+
+  padding: 0;
+
+  border-bottom-color: map-get($modal-colors, header-border);
+  background-color: map-get($modal-colors, header);
+
+  .close {
+    @include sizes($header-height);
+    margin-top: 0;
+    margin-right: -1px;
+    margin-left: auto;
+
+    opacity: 1;
+    background: map-get($modal-colors, close);
+    i {
+      color: $white;
+      font-size: 44px;
+    }
+  }
+}
+
+.modal-header-border {
+  padding-left: 20px;
+
+  border-bottom: 1px solid $iron;
+}
+
+.modal-header-close {
+  margin: 15px;
+
+  text-shadow: 2px 2px $iron;
+}

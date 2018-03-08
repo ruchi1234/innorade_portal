@@ -1,0 +1,24 @@
+////
+/// Page:Buttons:_custom
+///
+/// @author K Huehn
+/// @content Custom buttons
+///
+////
+
+&-custom {
+	color: $scampi;
+	background: $transparent;
+	border: 1px solid $scampi;
+	border-radius: 0;
+
+	&,
+	&[disabled] {
+
+		&:hover {
+			color: $white;
+			background: $scampi;
+			border: inherit;
+		}
+	}
+}

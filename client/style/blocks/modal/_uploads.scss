@@ -1,0 +1,149 @@
+////
+/// Blocks:Modal:_categories
+///
+/// @author K Huehn
+/// @content Modal categories
+///
+////
+
+.modal {
+  .uploads {
+    position: relative;
+
+    h4 {
+      padding: 0;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      color: $plum;
+      @include desktop {
+        padding: 25px 50px;
+      }
+      @include mobileAndTablet {
+        padding: 25px;
+      }
+      list-style: none;
+      li {
+        &.iloader {
+          p {
+            padding-left: 12px;
+            padding-right: 12px;
+            max-width: 100%;
+
+            @include mobileAndTablet {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-of-type(1) {
+          background-color: $wild_sand;
+          height: 250px;
+          border: 1px dashed $edward;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: $space;
+          img {
+            width: 125px;
+          }
+          button {
+            background-color: #6563a4;
+            color: #fff;
+            border: 1px solid #6563a4 !important;
+            height: 50px;
+            @include desktop {
+              width: 250px;
+            }
+            @include tablet {
+              width: 65%;
+            }
+            @include mobile-only {
+              width: 85%;
+            }
+            margin: 15px 0;
+            transition: background ease 0.3s;
+            border-radius: 5px;
+            text-transform: uppercase;
+            &:hover {
+              background-color: $white !important;
+              color: $scampi !important;
+            }
+            &:focus {
+              background-color: #6563a4;
+              outline: none;
+              border: 1px solid $scampi !important;
+              color: $white;
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          text-align: center;
+          padding: 20px 0;
+          color: $edward;
+          &::before {
+            content: "";
+            border: 1px solid $edward;
+            width: 100%;
+            display: block;
+            position: relative;
+            margin-top: 11px;
+          }
+          span {
+            background-color: #fff;
+            position: relative;
+            display: block;
+            width: 25px;
+            //margin: -20px auto;
+            color: $space;
+            font-size: 20px;
+            line-height: 20px;
+            margin: -13px auto;
+          }
+        }
+        &:nth-of-type(3) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+          a {
+            width: 100%;
+            margin: 10px 0;
+            input {
+              width: inherit;
+            }
+          }
+          span {
+            color: $space;
+            font-size: 18px;
+            margin: 10px 0;
+          }
+          button {
+            background-color: #6563a4;
+            color: #fff;
+            border: 1px solid #6563a4 !important;
+            height: 50px;
+            width: 250px;
+            margin: 10px 0;
+            transition: background ease 0.3s;
+            border-radius: 5px;
+            text-transform: uppercase;
+            &:hover {
+              background-color: $white !important;
+              color: $scampi !important;
+            }
+            &:focus {
+              background-color: #6563a4;
+              outline: none;
+              border: 1px solid $scampi !important;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

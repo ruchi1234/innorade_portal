@@ -1,0 +1,58 @@
+////
+/// Page:Nav:_module
+///
+/// @author K Huehn
+/// @content Navigational structure
+///
+////
+
+/// Inherit link color from containing element
+%link-color {
+
+	&,
+	&:focus,
+	&:hover {
+		@include colorInherit;
+	}
+}
+
+/// Remove border radius
+%no-border-radius {
+	@include noBorderRadius;
+}
+
+/// Navs
+.nav {
+	@extend %no-border-radius;
+
+	/// Links
+	@import "{}/client/style/page/nav/links";
+
+	/// Dropdowns
+	@import "{}/client/style/page/nav/dropdown";
+
+	/// Thumbnails
+	@import "{}/client/style/page/nav/thumbs";
+
+	/// Social media icons
+	@import "{}/client/style/page/nav/social";
+}
+
+@import "{}/client/style/page/nav/mobile_nav";
+
+
+/// Navbar
+.navbar {
+	font-weight: 700;
+	@extend %no-border-radius;
+
+	@import "{}/client/style/page/nav/navbar/module";
+}
+
+.navbar-bg {
+  border-bottom: 1px solid $iron;
+
+  &#navbar + .search-bar {
+    border-top: 0 solid $iron;
+  }
+}

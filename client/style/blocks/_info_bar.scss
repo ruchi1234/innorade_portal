@@ -1,0 +1,42 @@
+////
+/// Blocks:_info_bar
+///
+/// @author K Huehn
+/// @content Info bar
+///
+////
+
+.info-bar {
+	@include flexbox;
+	@include align-items(center);
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+
+	white-space: nowrap;
+
+	color: map-get($brick-colors, link);
+
+	> li {
+		@include inline-block(middle);
+
+		+ li {
+			margin-left: .5em;
+		}
+	}
+
+	.glyphicon {
+		.count {
+			font-family: $montserrat-font-family;
+		}
+		&:before {
+			@include inline-block(middle);
+
+			margin-right: .25em;
+
+			color: map-get($brick-colors, icon);
+		}
+	}
+}

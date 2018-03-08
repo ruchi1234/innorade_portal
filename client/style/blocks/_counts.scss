@@ -1,0 +1,32 @@
+.counts-common {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 14px;
+  font-weight: normal;
+
+  > .attach,
+  > .price,
+  > .like {
+    display: flex;
+    align-items: center;
+    color: $edward;
+    padding-right: 9px;
+
+    .glpyhicon {
+      vertical-align: center;
+    }
+
+    .glyphicon::before {
+      color: $turquoise;
+      padding-right: 3px;
+    }
+  }
+
+  > .price {
+    font-family: $quicksand-font-family;
+    color: $turquoise;
+    font-size: 18px;
+  }
+}

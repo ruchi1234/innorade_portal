@@ -1,0 +1,16 @@
+////
+/// Base:Variables:Colors:_modal
+///
+/// @author K Huehn
+/// @content Modal colors
+///
+////
+
+/// @name Modals
+$modal-colors:  (
+                  top:           $martinique,
+                  close:         $scampi,
+                  overlay:       rgba($scampi, .7),
+                  header:        $wild_sand,
+                  header-border: $iron
+                ) !default;

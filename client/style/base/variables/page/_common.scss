@@ -1,0 +1,26 @@
+////
+/// Base:Variables:Page:_common
+///
+/// @author K Huehn
+/// @content Common values
+///
+////
+
+/// @name Rounded corners
+$round-corner-radius:  12px;
+
+/// @name Bricks
+$brick-padding:         15px;
+$brick-mobile-padding:  7.5px;
+$brick-mobile-width:    48vw;
+$brick-tablet-width:    300px;
+$brick-desktop-width:   260px;
+
+$brick-sizes:           (
+                          mobile:  unquote("0 0 #{$brick-mobile-width / 1vw}%"),
+                          tablet:  unquote("0 0 #{$brick-tablet-width}"),
+                          desktop: unquote("0 0 #{$brick-desktop-width}")
+                        ) !default;
+
+/// @name Mavelets
+$mavelet-slider-height: 400px !default;

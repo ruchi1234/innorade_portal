@@ -1,0 +1,23 @@
+.or-separator {
+  text-align: center;
+  padding: 20px 0;
+  color: $mercury;
+  &::before {
+    content: "";
+    border: 1px solid $mercury;
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-top: 11px;
+  }
+  span {
+    background-color: #fff;
+    position: relative;
+    display: block;
+    width: 25px;
+    color: $mercury;
+    font-size: 20px;
+    line-height: 20px;
+    margin: -13px auto;
+  }
+}

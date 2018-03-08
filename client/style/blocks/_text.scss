@@ -1,0 +1,24 @@
+.text-muted {
+  color: $edward;
+}
+
+.text-error {
+  color: $error_red !important;
+}
+
+@mixin clampit($lines, $line-height: 1.4em) {
+  line-height: $line-height;
+  max-height: calc(#{$lines * $line-height} - #{$lines / 2}px);
+}
+
+.clamp {
+  overflow: hidden;
+  display: block;
+  word-break: break-word;
+
+  @for $i from 1 through 12 {
+    &.clamp-#{$i} {
+      @include clampit($i);
+    }
+  }
+}

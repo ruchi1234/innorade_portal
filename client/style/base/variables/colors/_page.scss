@@ -1,0 +1,52 @@
+////
+/// Base:Variables:Colors:_page
+///
+/// @author K Huehn
+/// @content Page colors
+///
+////
+
+
+/// @name Top header
+$top_header_colors:                 (
+                                      hover:       $mineshaft,
+                                      text:        $edward,
+                                      active:      $space,
+                                      background:  $white
+                                    ) !default;
+$top_bar_colors:                    (
+                                      background:  $martinique,
+                                      text:        $white,
+                                      control:     $turquoise
+                                    ) !default;
+
+/// @name Navigation
+$navbar_nav_colors:                 (
+                                      arrow:       $turquoise,
+                                      underline:   $turquoise
+                                    ) !default;
+$navbar-default-colors:             (
+                                      background:  $white,
+                                      border:      $transparent
+                                    ) !default;
+$search-bar-colors:                 (
+                                      background:  $mercury,
+                                      text:        $edward,
+                                      button:      $scampi,
+                                      button-text: $white
+                                    ) !default;
+
+/// @name Tabs
+$tab-bar-colors:                    (
+                                      background: $wild_sand,
+                                      text:       $edward,
+                                      active_bg:  $white
+                                    ) !default;
+
+/// Myribbon
+$myribbon-background-color:         $selago !default;
+
+/// @name Loader
+$loader-color:                      $plum !default;
+
+

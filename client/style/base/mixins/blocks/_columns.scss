@@ -1,0 +1,27 @@
+////
+/// Base:Mixins:Blocks:_columns
+///
+/// @author K Huehn
+/// @content Column blocks
+///
+////
+
+/// @name Float-column-50
+/// 50% Columns, floated
+@mixin float-column-50 {
+	float: left;
+
+	@include sizes(50%, null);
+
+	@content;
+}
+
+/// @name Center-column-80
+/// 80% column, centered
+@mixin center-column-80 {
+	margin-left: auto;
+	margin-right: auto;
+	@include sizes(80%, null);
+
+	@content;
+}

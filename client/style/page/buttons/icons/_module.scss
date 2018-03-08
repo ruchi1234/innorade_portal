@@ -1,0 +1,44 @@
+////
+/// Page:Buttons:Icon:_module
+///
+/// @author K Huehn
+/// @content Icon buttons
+///
+////
+
+&-icon {
+	@include inline-block;
+
+	@include sizes(30px);
+
+	cursor: pointer;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	&,
+	&:focus,
+	&:hover,
+	&.active a {
+		background-color: $transparent !important;
+	}
+
+	/// Info
+	@import "{}/client/style/page/buttons/icons/info";
+
+	/// Share
+	@import "{}/client/style/page/buttons/icons/share";
+
+	/// Favorite
+	@import "{}/client/style/page/buttons/icons/favorite";
+
+	/// Edit
+	@import "{}/client/style/page/buttons/icons/edit";
+
+	/// Attach
+	@import "{}/client/style/page/buttons/icons/attach";
+
+	/// Flag
+	@import "{}/client/style/page/buttons/icons/flag";
+}

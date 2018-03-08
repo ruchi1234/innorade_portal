@@ -1,0 +1,24 @@
+////
+/// Page:Main:_mavelet
+///
+/// @author Ms Tewksbury
+/// @content Mavelets
+///
+////
+
+
+.mavelet-blotter {
+
+    .slider {
+
+        .image-container {
+            @include sizes(null, $mavelet-slider-height);
+        }
+
+        &-frame,
+        &-decorator {
+            @include sizes(null, $mavelet-slider-height);
+            min-height: $mavelet-slider-height;
+        }
+    }
+}

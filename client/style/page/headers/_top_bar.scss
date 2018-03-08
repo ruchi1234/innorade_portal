@@ -1,0 +1,187 @@
+////
+/// Page:Headers:_top_bar
+///
+/// @author K Huehn
+/// @content Top bar
+///
+////
+
+.top-bar {
+	font-size: em(20px);
+
+	color: map-get($top_bar_colors, text);
+	background-color: map-get($top_bar_colors, background);
+
+	@include mobile {
+		font-size: 1em;
+	}
+
+	.navbar-text,
+	.navbar-link {
+		margin: 0;
+
+		@include colorInherit;
+	}
+
+	.navbar-text {
+		line-height: map-get($top-bar-dimensions, line-height);
+
+		@include flexbox;
+		@include flex-wrap(nowrap);
+		@include align-items(center);
+
+		margin-left: -15px;
+		margin-right: -15px;
+
+		vertical-align: middle;
+		white-space: nowrap;
+
+		@include tablet {
+			float: right;
+		}
+
+		.dropdown {
+      // For some reason this class is nested in itself
+			@include position(relative);
+
+			padding-right: 6px;
+			padding-left: 10px;
+
+			@include tablet {
+				padding-left: 0;
+			}
+		}
+	}
+
+	.dropdown-toggle {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	b {
+		font-weight: 800;
+
+		display: none;
+
+		&:after {
+			content: '\00a0';
+		}
+
+		@include tablet {
+			display: inline-block;
+		}
+	}
+
+	.controls {
+		margin-left: auto;
+		padding: 0 5px;
+
+		background-color: map-get($top_bar_colors, control);
+
+		.navbar-link {
+			font-size: 1.3em;
+			line-height: 1;
+
+      .right-carat {
+				@include triangle(right, absolute, $white, map-get($top-bar-dimensions, arrow));
+        vertical-align: middle;
+        position: relative;
+        margin-left: 6px;
+        display: inline-block;
+      }
+		}
+	}
+}
+
+// Desktop Navbar Overrides
+@media screen and (min-width: 772px) {
+	.navbar {
+		padding: 0;
+	}
+	#global-search {
+		.container {
+			padding: 0;
+		}
+	}
+	header[role="banner"] {
+		.hideable {
+		 .navbar-header {
+				height: 57px;
+				width: 88px;
+				padding: 7px 0;
+				flex: 0 auto;
+			}
+			form {
+				.input-group {
+					input {
+						padding-left: 0;
+					}
+				}
+			}
+			#main-navigation {
+				padding-right: 0;
+				.navbar-wrapper {
+					.navbar-nav {
+						a {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Navbar Overrides
+header[role="banner"] {
+	.hideable {
+		.logo {
+			img {
+				width: 86px;
+			}
+		}
+
+		.navbar {
+			.navbar-header {
+				height: 50px;
+				.mobile-menu-button {
+					position: absolute;
+					right: 15px;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					height: 21px;
+					.navbar-toggle {
+						border-radius: 0;
+						width: 30px;
+						.icon-bar {
+							height: 2px;
+							width: 100%;
+							&+ .icon-bar {
+								margin-top: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+		form {
+			min-height: 40px;
+			.input-group {
+				font-size: 17px;
+				.input-group-btn {
+					flex: auto;
+				}
+				input {
+					font-size: 17px;
+					height: 40px;
+				}
+			}
+			.search-button {
+				font-size: 16px;
+				height: 40px;
+			}
+		}
+	}
+}

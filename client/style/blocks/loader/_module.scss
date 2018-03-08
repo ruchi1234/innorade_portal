@@ -1,0 +1,22 @@
+////
+/// Blocks:Loader:_module
+///
+/// @author K Huehn
+/// @content Loading spinner
+///
+////
+
+.sk-wrapper {
+  @include flex-center-child;
+  @include fit-parent;
+
+  > .sk-fading-circle {
+    height: 60px;
+    width: 60px;
+  }
+
+  background-color: $white;
+  &.has-height {
+    min-height: 200px;
+  }
+}

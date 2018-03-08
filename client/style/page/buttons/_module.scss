@@ -1,0 +1,33 @@
+////
+/// Page:Buttons:_module
+///
+/// @author K Huehn
+/// @content Buttons
+///
+////
+
+.btn {
+	color: map-get($button_colors, text);
+	font-size: 1rem;
+	font-weight: 700;
+	padding-top: .75em;
+	padding-bottom: .75em;
+	text-transform: uppercase;
+
+	border: 2px solid $transparent;
+	border-radius: 5px;
+
+	transition: background-color .1s ease-out, border-color .1s ease-out, color .5s ease-out;
+
+	/// Primary
+	@import "{}/client/style/page/buttons/primary";
+
+	/// Secondary
+	@import "{}/client/style/page/buttons/secondary";
+
+	/// Icon
+	@import "{}/client/style/page/buttons/icons/module";
+
+	/// Custom
+	@import "{}/client/style/page/buttons/custom";
+}

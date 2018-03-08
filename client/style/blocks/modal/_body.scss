@@ -1,0 +1,55 @@
+////
+/// Blocks:Modal:_body
+///
+/// @author K Huehn
+/// @content Modal body
+///
+////
+
+.modal-body {
+	@include flex-direction(column);
+	@include flex-grow(1);
+
+	padding: 25px;
+	overflow: auto;
+
+	@include desktop {
+		padding: 25px;
+	}
+
+  > * > h4 {
+    text-align: center;
+  }
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  @import "{}/client/style/blocks/modal/confirmation";
+}
+
+.modal-title {
+	font-size: em(20px);
+
+	padding: 0 10px;
+
+	user-select: none;
+	text-align: center;
+
+	color: $space;
+
+	@include flex(0 0 auto);
+}
+
+.modal-title30 {
+	font-size: em(20px);
+
+	padding: 30px;
+
+	user-select: none;
+	text-align: center;
+
+	color: $space;
+
+	@include flex(0 0 auto);
+}

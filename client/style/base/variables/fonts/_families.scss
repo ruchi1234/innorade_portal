@@ -1,0 +1,28 @@
+////
+/// Base:Variables:Fonts:_families
+///
+/// @author K Huehn
+/// @content Font families
+///
+////
+
+/// @name Arial
+$arial-font-family:                 Arial !default;
+
+/// @name Helvetica
+$helvetica-font-family:             'Helvetica Neue', Helvetica !default;
+
+/// @name Sans-serif
+$sans-serif-font-family:            $arial-font-family, $helvetica-font-family, sans-serif !default;
+
+/// @name Raleway
+$raleway-font-family:               Raleway, $sans-serif-font-family, sans-serif !default;
+
+/// @name Quicksand
+$quicksand-font-family:             Quicksand, $sans-serif-font-family, sans-serif !default;
+
+/// @name Base font family
+$base-font-family:                  $raleway-font-family !default;
+
+/// @name Montserrat font family
+$montserrat-font-family:            Montserrat, $raleway-font-family;

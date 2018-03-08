@@ -1,0 +1,37 @@
+.product-card {
+  /* Holy fuck IE Blows */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    height: 100%;
+  }
+  li {
+    list-style: none;
+  }
+  .details {
+    padding: 15px;
+    cursor: pointer;
+    img {
+      margin: 0 auto;
+      max-width: 100%;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .title {
+      margin: 0 0 13px 0;
+      p {
+        font-size: 18px;
+        color: $space;
+        font-weight: 500;
+        line-height: 20px;
+        margin: 0;
+      }
+    }
+    .caption {
+      margin: 0 0 13px 0;
+      font-size: 12px;
+      line-height: 15px;
+      max-height: 102px;
+      color: $space;
+    }
+  }
+}

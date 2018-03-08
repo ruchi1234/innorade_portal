@@ -1,0 +1,12 @@
+////
+/// Blocks:Form:_label
+///
+/// @author
+/// @content Form labels
+///
+////
+
+label {
+	color: map-get($label-colors, text);
+	@include font-size(16px);
+}

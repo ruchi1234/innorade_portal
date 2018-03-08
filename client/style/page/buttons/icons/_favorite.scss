@@ -1,0 +1,20 @@
+////
+/// Page:Buttons:Icon:_favorite
+///
+/// @author K Huehn
+/// @content Favorite button
+///
+////
+
+.favorite & {
+	@include favorite-icon(none, map-get($icon-button-colors, rest));
+
+	&:hover,
+	&:active {
+		@include favorite-icon(none, map-get($icon-button-colors, hover));
+	}
+}
+
+.favorite.active & {
+	@include favorite-icon(map-get($icon-button-colors, active), $white);
+}

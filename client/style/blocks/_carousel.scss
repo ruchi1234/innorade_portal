@@ -1,0 +1,49 @@
+// External component nuka carousel uses class slider
+
+.slider-wrapper {
+}
+
+.slider {
+  .fa-arrow-circle-left,
+  .fa-arrow-circle-right {
+    padding: 12px;
+    color: $iron;
+
+    &:hover {
+      color: lighten($iron, 5%);
+    }
+  }
+    
+  &.empty {
+    display: none !important;
+  }
+
+  @include desktop {
+    &.empty {
+      display: block;
+      visibility: none !important;
+    }
+  }
+
+  .selectors {
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+
+      a {
+        margin: 4px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background-color: map-get($carousel-colors, bullet);
+      }
+    }
+
+    .active {
+      background-color: map-get($carousel-colors, bullet-active);
+    }
+  }
+}

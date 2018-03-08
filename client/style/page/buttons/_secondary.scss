@@ -1,0 +1,26 @@
+////
+/// Page:Buttons: _secondary
+///
+/// @author K Huehn
+/// @content Sdcond buttons
+///
+////
+
+&-secondary {
+	color: map-get($button_colors, primary-bg);
+
+	background-color: map-get($button_colors, secondary-bg);
+	border-color: map-get($button_colors, primary-bg);
+
+	&:hover {
+		color: map-get($button_colors, text);
+
+		background-color: map-get($button_colors, primary-bg);
+		border-color: map-get($button_colors, primary-bg);
+	}
+
+	&:active,
+	&.active {
+		@extend .btn-secondary:hover;
+	}
+}

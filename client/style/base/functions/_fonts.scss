@@ -1,0 +1,28 @@
+////
+/// Base:Functions:_fonts
+///
+/// @author K Huehn
+/// @content Font functions
+///
+////
+
+
+/// Load base font size definitions
+@import "../variables/fonts/sizes";
+
+/// @name CalculateREM
+/// Function to calculate rem font size values
+@function calculateRem($size:null, $base:null) {
+	@if $size != null or $base != null {
+		$remSize: $size / $base;
+		@return $remSize * 1rem;
+	}
+}
+
+/// @name Em
+/// Function to convert pixels to ems
+@function em($px:null, $base:$base-font-size) {
+	@if $px != null {
+		@return ($px / $base) * 1em;
+	}
+}

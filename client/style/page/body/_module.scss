@@ -1,0 +1,28 @@
+////
+/// Page:Body:_module
+///
+/// @author K Huehn
+/// @content Base body structure
+///
+////
+
+
+/// @name Root
+/// document
+@import "{}/client/style/page/body/root";
+
+/// @name Headings
+/// page headings
+@import "{}/client/style/page/body/headings";
+
+/// @name Images
+/// page images
+@import "{}/client/style/page/body/img";
+
+/// @name Links
+/// anchor link styles
+@import "{}/client/style/page/body/links";
+
+/// @name Container (overrides)
+@import "{}/client/style/page/body/container";
+

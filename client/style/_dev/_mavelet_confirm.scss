@@ -1,0 +1,29 @@
+section {
+  &.mavelet-confirm {
+    .header-row {
+      .col {
+        text-align: center;
+        h2 {
+          font-size: 1.28571rem;
+          font-weight: 600;
+          text-align: center !important;
+          color: #303939;
+        }
+        h4 {
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 400;
+          text-align: center !important;
+          color: #303939;
+        }
+      }
+    }
+    .row {
+      .col {
+        .mavelet-wrapper {
+          overflow-y: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.user-info-block {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  .user-image {
+    flex-basis: 40px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  ul {
+    list-style: none;
+    vertical-align: middle;
+    margin: 0;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    line-height: 15px;
+    color: $space;
+    font-weight: 500;
+    overflow: hidden;
+    .sub-text {
+      font-weight: 300;
+    }
+  }
+}

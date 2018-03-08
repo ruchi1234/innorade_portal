@@ -1,0 +1,20 @@
+////
+/// Page:Buttons:Icon:_share
+///
+/// @author K Huehn
+/// @content Share button
+///
+////
+
+.share & {
+	@include share-icon(none, map-get($icon-button-colors, rest));
+
+	&:hover,
+	&:active {
+		@include share-icon(none, map-get($icon-button-colors, hover));
+	}
+}
+
+.share.active & {
+	@include share-icon(map-get($icon-button-colors, active), $white);
+}

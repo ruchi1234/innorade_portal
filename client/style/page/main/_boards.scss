@@ -1,0 +1,20 @@
+////
+/// Page:Main:_browse
+///
+/// @author K Huehn
+/// @content Browse
+///
+////
+
+.browse {
+  .tab-pane {
+    padding: 35px 0 0;
+
+    .row {
+      @include flexbox;
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      @include align-items(stretch);
+    }
+  }
+}

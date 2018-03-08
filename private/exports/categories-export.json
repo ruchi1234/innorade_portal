@@ -1,0 +1,255 @@
+{ 
+    "_id" : "6ye3JT8zuv4ytbrEz", 
+    "category" : "Sporting Goods", 
+    "type" : NumberInt(3), 
+    "icon" : "sporting_goods.png", 
+    "introduction" : "Thank you for starting a sporting goods hunt with Maven! We are locating a sports expert to shop for you. While we're doing that, we have a few questions. And, we'll pass along your answers once the right maven is assigned.", 
+    "active" : true, 
+    "questions" : [
+        {
+            "order" : NumberInt(1), 
+            "question" : "For which sport are you shopping?"
+        }, 
+        {
+            "order" : NumberInt(2), 
+            "question" : "What specific product within the sport?"
+        }, 
+        {
+            "order" : NumberInt(3), 
+            "question" : "Are you partial to a brand(s)?"
+        }, 
+        {
+            "order" : NumberInt(4), 
+            "question" : "Any additional details that would be useful for the Maven to know?"
+        }, 
+        {
+            "order" : NumberInt(5), 
+            "question" : "What price range do you have in mind?"
+        }
+    ], 
+    "created" : ISODate("2016-02-27T15:05:59.784+0000"), 
+    "updated" : ISODate("2016-02-27T15:05:59.785+0000")
+}
+{ 
+    "_id" : "foa3FpgbnZjGprqkB", 
+    "category" : "Baby", 
+    "type" : NumberInt(4), 
+    "icon" : "baby.png", 
+    "introduction" : "Thank you for starting a hunt for baby items with Maven!  We love shopping for babies! We are locating a baby expert to shop for you. While we're doing that, we have a few questions. And, we'll pass along your answers once the right maven is assigned.", 
+    "active" : true, 
+    "questions" : [
+        {
+            "order" : NumberInt(1), 
+            "question" : "In what type of baby product are you interested?"
+        }, 
+        {
+            "order" : NumberInt(2), 
+            "question" : "Is the child a boy or girl?"
+        }, 
+        {
+            "order" : NumberInt(3), 
+            "question" : "What age is the infant / toddler?"
+        }, 
+        {
+            "order" : NumberInt(4), 
+            "question" : "Any additional details that would be useful for the Maven to know?"
+        }, 
+        {
+            "order" : NumberInt(5), 
+            "question" : "What price range do you have in mind?"
+        }
+    ], 
+    "created" : ISODate("2016-02-27T15:05:59.795+0000"), 
+    "updated" : ISODate("2016-02-27T15:05:59.795+0000")
+}
+{ 
+    "_id" : "p66HJ7XfvAwmjcAfe", 
+    "category" : "Something Else...", 
+    "type" : NumberInt(100), 
+    "icon" : "something_else.png", 
+    "introduction" : "Thank you for starting a hunt with Maven! We have a few questions so that we can assign the right shopping expert for you. And, we'll pass along your answers once the right maven is assigned.", 
+    "active" : true, 
+    "questions" : [
+        {
+            "order" : NumberInt(1), 
+            "question" : "Tell us what you are shopping for?"
+        }, 
+        {
+            "order" : NumberInt(2), 
+            "question" : "Is there a particular size or specification needed?"
+        }, 
+        {
+            "order" : NumberInt(3), 
+            "question" : "If this is a taste oriented item, tell us a little about your likes and dislikes?"
+        }, 
+        {
+            "order" : NumberInt(4), 
+            "question" : "Any additional details that would be useful for the Maven to know?"
+        }, 
+        {
+            "order" : NumberInt(5), 
+            "question" : "What price range do you have in mind?"
+        }
+    ], 
+    "created" : ISODate("2016-02-27T15:05:59.803+0000"), 
+    "updated" : ISODate("2016-02-27T15:05:59.803+0000")
+}
+{ 
+    "_id" : "p66HJ7XfvAwmjcAfa", 
+    "category" : "Valentine's Day", 
+    "type" : NumberInt(1), 
+    "icon" : "valentines.png", 
+    "introduction" : "Thank you for starting a hunt at Maven!  We will find that perfect gift to make this Valentine's Day very special.  While we are locating a shopping expert for your hunt, we have a few questions. And, we'll pass along your answers once the right maven is assigned.", 
+    "active" : false, 
+    "questions" : [
+        {
+            "order" : NumberInt(1), 
+            "question" : "Who are you shopping for?"
+        }, 
+        {
+            "order" : NumberInt(2), 
+            "question" : "What is their gender and approximate age?"
+        }, 
+        {
+            "order" : NumberInt(3), 
+            "question" : "Did you have a type of present in mind that you know the gift recipient would love?"
+        }, 
+        {
+            "order" : NumberInt(4), 
+            "question" : "What are their interests, hobbies, and/or favorite activities?"
+        }, 
+        {
+            "order" : NumberInt(5), 
+            "question" : "What price range do you have in mind?"
+        }
+    ], 
+    "created" : ISODate("2016-02-27T15:05:59.811+0000"), 
+    "updated" : ISODate("2016-02-27T15:05:59.811+0000")
+}
+{ 
+    "_id" : "namedzb2g63ZxACCT", 
+    "category" : "Named Account", 
+    "type" : NumberInt(0), 
+    "introduction" : "Thank you for connecting via Maven!  We have notified your Maven that you've started a hunt and especially requested them!", 
+    "active" : true, 
+    "questions" : [
+        {
+            "order" : NumberInt(1), 
+            "question" : "As we wait for them to pickup, any details or questions you can share?"
+        }, 
+        {
+            "order" : NumberInt(2), 
+            "question" : "Do you have something specific already in mind??"
+        }, 
+        {
+            "order" : NumberInt(3), 
+            "question" : "Any favorite colors, fragrances, flavors, etc.?"
+        }, 
+        {
+            "order" : NumberInt(4), 
+            "question" : "Is there any timeline we are dealing with?  Need by date??"
+        }, 
+        {
+            "order" : NumberInt(5), 
+            "question" : "What price range do you have in mind?"
+        }
+    ], 
+    "created" : ISODate("2016-02-27T15:05:59.817+0000"), 
+    "updated" : ISODate("2016-02-27T15:05:59.818+0000")
+}
+{ 
+    "_id" : "DWZ9TscnpEp8SfmiT", 
+    "category" : "Consumer Electronics", 
+    "type" : NumberInt(5), 
+    "icon" : "consumer_electronic.png", 
+    "introduction" : "Thank you for starting an electronics hunt with us!  We are locating an electronics expert to help you find the perfect item. While we're doing that, we have a few questions for you.  And, we'll pass along your answers once the right maven is assigned.", 
+    "active" : true, 
+    "questions" : [
+        {
+            "order" : NumberInt(1), 
+            "question" : "What kind of electronics product are you looking for?  For example, a computer, a television or something else?"
+        }, 
+        {
+            "order" : NumberInt(2), 
+            "question" : "Are there particular electronics brands that you prefer?"
+        }, 
+        {
+            "order" : NumberInt(3), 
+            "question" : "What features must the item have in order to meet your needs, such as a particular size or features?"
+        }, 
+        {
+            "order" : NumberInt(4), 
+            "question" : "What is the most important thing to you about the product you're looking for, such as features, price, brand or something else?"
+        }, 
+        {
+            "order" : NumberInt(5), 
+            "question" : "What price range do you have in mind?"
+        }
+    ], 
+    "created" : ISODate("2016-02-27T15:05:59.742+0000"), 
+    "updated" : ISODate("2016-02-27T15:05:59.743+0000")
+}
+{ 
+    "_id" : "DzuDH9wiufMEm4A9b", 
+    "category" : "Gifts", 
+    "type" : NumberInt(6), 
+    "icon" : "other_gifts.png", 
+    "introduction" : "Thank you for starting a gift hunt...our mavens love gift shopping!  We are locating a maven to help you find the perfect gift.  While we're doing that, we have a few questions for you.  And, we'll pass along your answers once the right maven is assigned.", 
+    "active" : true, 
+    "questions" : [
+        {
+            "order" : NumberInt(1), 
+            "question" : "Who are you giving the gift to?"
+        }, 
+        {
+            "order" : NumberInt(2), 
+            "question" : "What is the occasion?"
+        }, 
+        {
+            "order" : NumberInt(3), 
+            "question" : "Can you tell us a little about this person - interests, hobbies, or the kinds of things this person finds appealing?"
+        }, 
+        {
+            "order" : NumberInt(4), 
+            "question" : "Are there any other details that would be useful for the Maven to know when shopping for the perfect present?"
+        }, 
+        {
+            "order" : NumberInt(5), 
+            "question" : "What price range do you have in mind?"
+        }
+    ], 
+    "created" : ISODate("2016-02-27T15:05:59.754+0000"), 
+    "updated" : ISODate("2016-02-27T15:05:59.754+0000")
+}
+{ 
+    "_id" : "Pz2euP4cwRLAep8SD", 
+    "category" : "Home and Kitchen", 
+    "type" : NumberInt(2), 
+    "icon" : "home_goods.png", 
+    "introduction" : "Thank you for starting a home & kitchen hunt. We are locating a home expert to shop for you. While we're doing that, we have a few questions. And, we'll pass along your answers once the right maven is assigned.", 
+    "active" : true, 
+    "questions" : [
+        {
+            "order" : NumberInt(1), 
+            "question" : "For which room in the house are you shopping?"
+        }, 
+        {
+            "order" : NumberInt(2), 
+            "question" : "What product within the room?"
+        }, 
+        {
+            "order" : NumberInt(3), 
+            "question" : "Can you tell us specifics existing decor in the room, colors to coordinate with or brand preferences?"
+        }, 
+        {
+            "order" : NumberInt(4), 
+            "question" : "Any additional details that would be useful for the Maven to know so that they find the perfect item?"
+        }, 
+        {
+            "order" : NumberInt(5), 
+            "question" : "What price range do you have in mind?"
+        }
+    ], 
+    "created" : ISODate("2016-02-27T15:05:59.764+0000"), 
+    "updated" : ISODate("2016-02-27T15:05:59.764+0000")
+}

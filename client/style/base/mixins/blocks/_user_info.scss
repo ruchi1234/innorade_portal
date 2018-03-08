@@ -1,0 +1,33 @@
+////
+/// Base:Mixins:Blocks:_user_info
+///
+/// @author K Huehn
+/// @content User info mixins
+///
+////
+
+/// Import colors
+@import "{}/client/style/base/variables/colors/brick";
+
+/// Import icon
+@import "{}/client/style/base/mixins/blocks/svg";
+
+/// @name  Unlocked
+@mixin unlocked($color:$black, $pos:'right center', $size:'14px') {
+	@include lock-icon($color);
+
+	@include sizes(unquote($size));
+	// background-repeat: no-repeat;
+	// background-position: unquote($pos);
+	// background-size: unquote($size) unquote($size);
+
+	// @content;
+}
+
+@mixin user-info-unlocked {
+	.user-info {
+		background: no-repeat 100% 40%;
+		background-size: 14px 14px;
+		@include lock-icon(map-get($brick-icon-colors, outline));
+	}
+}

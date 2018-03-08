@@ -1,0 +1,14 @@
+////
+/// Base:Mixins:_background
+///
+/// @author K Huehn
+/// @content Background mixins
+///
+////
+
+/// @name Centered background
+@mixin centered-background {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}

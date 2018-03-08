@@ -1,0 +1,166 @@
+/**
+ * Blocks:Form:_profile
+ * @author
+ * @content Profile form
+ */
+
+div#profileForm {
+  margin: 25px 0 45px;
+  .row {
+    .profile-header {
+      .row {
+        &:nth-of-type(2) {
+          margin: 20px -15px;
+        }
+      }
+    }
+  }
+  input,
+  textarea {
+    margin: 15px 0;
+    height: 50px;
+    line-height: 20px !important;
+    padding: 0 0 0 12px;
+    width: 100%;
+  }
+
+  .switchRow {
+    margin-top: 20px;
+    padding: 0 15px;
+    label {
+      &.switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+    }
+  }
+}
+
+#bio {
+  height: 150px !important;
+  padding: 12px 0 0 12px !important;
+}
+
+/* The switch - the box around the slider-check */
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider-check */
+.slider-check {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $edward;
+  transition: background ease 0.3s;
+  height: 36px;
+  span {
+    position: absolute;
+    top: 6px;
+    color: $white;
+    font-weight: 400;
+    font-size: 13px;
+    &.left {
+      left: 5px;
+    }
+    &.right {
+      right: 5px;
+    }
+  }
+}
+
+.slider-check:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + .slider-check {
+  background-color: $scampi;
+  transition: background ease 0.3s;
+}
+
+input:focus + .slider-check {
+  box-shadow: 0 0 1px $scampi;
+}
+
+input:checked + .slider-check:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.single-image-container {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-position-y: center;
+  background-position-x: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.btn-custom.disabled {
+  background-color: $edward;
+  border: 1px solid $edward !important;
+  cursor: not-allowed;
+  &:hover {
+    background-color: $edward;
+    border: 1px solid $edward !important;
+  }
+}
+.btn-custom {
+  background-color: $scampi;
+  color: $white;
+  border: 1px solid $scampi !important;
+  height: 50px;
+  width: 100%;
+  transition: background ease 0.3s;
+  line-height: 28px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $white !important;
+    color: $scampi !important;
+  }
+  &:focus {
+    background-color: #6563a4;
+    outline: none;
+    border: 1px solid $scampi !important;
+    color: $white;
+  }
+}
+.questionLabel {
+  font-weight: 600;
+  font-size: 16px;
+  color: $space;
+}
+
+.verification-btn {
+  font-size: 11px;
+  margin: 15px 0;
+  line-height: 50px;
+}

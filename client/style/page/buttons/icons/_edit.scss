@@ -1,0 +1,20 @@
+////
+/// Page:Buttons:Icon:_edit
+///
+/// @author K Huehn
+/// @content Edit button
+///
+////
+
+.edit & {
+	@include edit-icon(none, map-get($icon-button-colors, rest));
+
+	&:hover,
+	&:active {
+		@include edit-icon(none, map-get($icon-button-colors, hover));
+	}
+}
+
+.edit.active & {
+	@include edit-icon(map-get($icon-button-colors, active), $white);
+}

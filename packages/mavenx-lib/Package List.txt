@@ -1,0 +1,145 @@
+// , 'session', 'jquery', 'tracker', 'random', 'check', 'standard-minifiers', 'es5-shim', 'ecmascript');
+
+// api.imply(packages);
+
+meteor-base             # Packages every Meteor app needs to have
+mobile-experience       # Packages for a great mobile UX
+mongo                   # The database Meteor supports right now
+blaze-html-templates    # Compile .html files into Meteor Blaze views
+session                 # Client-side reactive dictionary for your app
+jquery                  # Helpful client-side library
+tracker                 # Meteor's client-side reactive programming library
+random                  # math stuff
+check                   # part of security package to check values before inserting
+standard-minifiers      # JS/CSS minifiers run for production mode
+es5-shim                # ECMAScript 5 compatibility for older browsers.
+ecmascript              # Enable ECMAScript2015+ syntax in app code
+
+
+# helper packages
+aldeed:collection2      # used for schema
+tmeasday:publish-counts # remove a couple of steps for publishing filtered pub counts
+underscore              # useful for doing many shorthand function / variable updating
+underscorestring:underscore.string
+jeremysaks:underscore-nudge
+reactive-dict           # used instead of session
+reactive-var            #
+momentjs:moment         # date and time library
+emmanuelbuah:publishrelate
+tewksbum:server-session #used to move stuff from client to server via this.connection
+meteorhacks:kadira      # for cloud monitoring
+meteorhacks:kadira-debug
+percolate:synced-cron   # for our clock cron jobs
+percolate:migrations    # running data migration jobs
+
+
+# accont management
+accounts-password       # base Meteor user framework
+insecure                # Allow all DB writes from clients (for prototyping)
+accounts-facebook       # fb authentication
+accounts-google         # google authentication
+mizzao:user-status
+mizzao:timesync
+ian:accounts-ui-bootstrap-3
+#jamielob:accounts-ui-no-dropdown
+
+
+
+# routing
+iron:router             # router
+zimme:active-route      # used for navigation checking and URL if branching
+okgrow:router-autoscroll
+
+
+
+# UI stuff
+less                    # Inspinia uses this to spin out .css
+twbs:bootstrap          # we use bootstrap... not sure if this is duplicative?
+peppelg:bootstrap-3-modal  # so can access helper aspects of modal template
+fortawesome:fontawesome # ? think used by Inspinia?
+# checkout http://s-alert-demo.meteor.com/
+zenorocha:clipboard     # copys attribute to clipboard
+sacha:spin              # simple loader spinner
+
+
+
+# external integrations
+email                   # send an email
+http                    # used for HTTP get api calls
+meteorhacks:ssr         # server side rendering, used for HTML emails
+edgee:slingshot         # client side S3 pushing.  Found this easier for clipboard.
+harrison:papa-parse     # csv parser
+yogiben:mixpanel
+mixpanel                # mavenx package for doing MXP people lookups and other things via their api
+
+
+
+# try to eliminate
+manuel:reactivearray
+lepozepo:s3             # user for uploading files to our S3 bucket
+
+
+# no clue?
+service-configuration
+audit-argument-checks
+
+
+
+# Not used.... remove...
+
+
+
+#new shit...
+
+
+'mongo',
+'blaze-html-templates',
+'session',
+'jquery',
+'tracker',
+'random',
+'check',
+'standard-minifiers',
+'es5-shim',
+'ecmascript',
+'aldeed:collection2',
+'tmeasday:publish-counts',
+'underscore',
+'underscorestring:underscore.string',
+'jeremysaks:underscore-nudge',
+'reactive-dict',
+'reactive-var',
+'momentjs:moment',
+'emmanuelbuah:publishrelate',
+'tewksbum:server-session',
+'meteorhacks:kadira',
+'meteorhacks:kadira-debug',
+'percolate:synced-cron',
+'percolate:migrations',
+'accounts-password',
+'insecure',
+'accounts-facebook',
+'accounts-google',
+'mizzao:user-status',
+'mizzao:timesync',
+'ian:accounts-ui-bootstrap-3',
+'iron:router',
+'zimme:active-route',
+'okgrow:router-autoscroll',
+'less',
+'twbs:bootstrap',
+'peppelg:bootstrap-3-modal',
+'fortawesome:fontawesome',
+'zenorocha:clipboard',
+'sacha:spin',
+'email',
+'http',
+'meteorhacks:ssr',
+'edgee:slingshot',
+'harrison:papa-parse',
+'yogiben:mixpanel',
+'mixpanel',
+'manuel:reactivearray',
+'lepozepo:s3',
+'service-configuration',
+'audit-argument-checks'

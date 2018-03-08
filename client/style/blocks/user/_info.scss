@@ -1,0 +1,32 @@
+////
+/// Blocks:User:_info
+///
+/// @author K Huehn
+/// @content User info
+///
+////
+
+&-info {
+	font-size: em(12px);
+	font-weight: 700;
+
+	@include flexbox;
+	@include align-items(center);
+
+	@include sizes(null, $dim);
+
+	&:after {
+		// padding-right: 1em;
+		// margin-left: 1em;
+	}
+
+	.unlocked & {
+
+		&:after {
+			// @include flex(0 0 auto);
+			// content: '';
+
+			// @include unlocked(map-get($brick-icon-colors, outline));
+		}
+	}
+}

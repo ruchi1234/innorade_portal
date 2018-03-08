@@ -1,0 +1,41 @@
+////
+/// Blocks:Modal:_content
+///
+/// @author K Huehn
+/// @content Modal content
+///
+////
+
+.modal-content {
+  @include flex(0 0 100%);
+  @include flex-direction(column);
+  @include noBorderRadius;
+  @include shadow;
+
+  max-height: 85vh;
+  display: inherit;
+  border: 0 none;
+  overflow: hidden;
+
+  .modal-dialog > & {
+    &::before {
+      content: '';
+
+      border-top: 10px solid map-get($modal-colors, top);
+    }
+  }
+}
+
+.modal {
+  &.eh-modal {
+    display: block;
+  }
+
+  .empty {
+
+    a {
+      @include logo-icon;
+      background-size: 50%;
+    }
+  }
+}

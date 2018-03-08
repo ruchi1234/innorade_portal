@@ -1,0 +1,31 @@
+////
+/// Page:Nav:Navbar:_wrapper
+///
+/// @author K Huehn
+/// @content Navbar Wrapper
+///
+////
+
+&-wrapper {
+	@include flexbox;
+	@include flex-flow(column wrap);
+
+	padding: 15px;
+
+	@include desktop {
+		padding: 0;
+
+		@include flex-flow(row nowrap);
+
+		@include autoSpread('.navbar-nav','.navbar-right');
+	}
+
+	.navbar-nav {
+		@include flexbox;
+		@include flex-direction(column);
+
+		@include desktop {
+			@include flex-direction(row);
+		}
+	}
+}

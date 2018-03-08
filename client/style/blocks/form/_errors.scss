@@ -1,0 +1,13 @@
+////
+/// Blocks:Form:_errors
+///
+/// @author
+/// @content Form Validation errors
+///
+////
+
+
+.error {
+	border-color: map-get($input-colors, error) !important;
+	outline: 0 none;
+}

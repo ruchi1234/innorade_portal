@@ -1,0 +1,51 @@
+////
+/// Page:Nav:Navbar:_header
+///
+/// @author K Huehn
+/// @content Navbar Header
+///
+////
+
+&-header {
+	@include flexbox;
+	@include justify-content(space-between);
+	@include align-items(center);
+}
+
+&-brand {
+	@include flexbox;
+
+	@include sizes(null,100%);
+	margin-right: auto;
+	padding: 0;
+
+	@include breakpoint(mobile) {
+		max-width: 100%;
+		margin-left: 0;
+	}
+
+	&[href] {
+		cursor: pointer;
+	}
+
+	img {
+		@include sizes(100%,null);
+	}
+}
+
+&-toggle {
+	margin-right: 0;
+	margin-left: auto;
+
+	@include mobileAndTablet {
+		display: block;
+	}
+
+	.icon-bar {
+		@include sizes(50px, 3px);
+
+		+ .icon-bar {
+			margin-top: 10px;
+		}
+	}
+}

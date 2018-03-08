@@ -1,0 +1,36 @@
+@mixin secondary {
+  @include font-size(14px);
+  border: 1px solid $scampi;
+  color: $scampi;
+  border-radius: 3px;
+  background-color: $white;
+}
+
+&-tag {
+  @include secondary;
+  @include inline-flex;
+  align-items: center;
+
+  height: 45px;
+  padding: 3px;
+  margin: 3px;
+  text-decoration: none !important;
+
+  > .image-container,
+  > p {
+    margin-right: 6px;
+  }
+
+  > .image-container {
+    width: 30px;
+    height: 30px;
+  }
+
+  > p {
+    margin-bottom: 0;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
